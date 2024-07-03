@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /nfs/homes/mmariani/Desktop/cpp/cmake-build-debug/
+cmake_ninja_workdir = /home/trimia/Desktop/cpp/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target megaphone
 
@@ -49,13 +49,13 @@ cmake_ninja_workdir = /nfs/homes/mmariani/Desktop/cpp/cmake-build-debug/
 
 build cmake_object_order_depends_target_megaphone: phony || CMakeFiles/megaphone.dir
 
-build CMakeFiles/megaphone.dir/module00/ex00/megaphone.cpp.o: CXX_COMPILER__megaphone_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module00/ex00/megaphone.cpp || cmake_object_order_depends_target_megaphone
+build CMakeFiles/megaphone.dir/module00/ex00/megaphone.cpp.o: CXX_COMPILER__megaphone_unscanned_Debug /home/trimia/Desktop/cpp/module00/ex00/megaphone.cpp || cmake_object_order_depends_target_megaphone
   DEP_FILE = CMakeFiles/megaphone.dir/module00/ex00/megaphone.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/megaphone.dir
   OBJECT_FILE_DIR = CMakeFiles/megaphone.dir/module00/ex00
 
-build CMakeFiles/megaphone.dir/module00/ex01/Contact.cpp.o: CXX_COMPILER__megaphone_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module00/ex01/Contact.cpp || cmake_object_order_depends_target_megaphone
+build CMakeFiles/megaphone.dir/module00/ex01/Contact.cpp.o: CXX_COMPILER__megaphone_unscanned_Debug /home/trimia/Desktop/cpp/module00/ex01/Contact.cpp || cmake_object_order_depends_target_megaphone
   DEP_FILE = CMakeFiles/megaphone.dir/module00/ex01/Contact.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/megaphone.dir
@@ -86,19 +86,19 @@ build megaphone: CXX_EXECUTABLE_LINKER__megaphone_Debug CMakeFiles/megaphone.dir
 
 build cmake_object_order_depends_target_phonebook: phony || CMakeFiles/phonebook.dir
 
-build CMakeFiles/phonebook.dir/module00/ex01/PhoneBook.cpp.o: CXX_COMPILER__phonebook_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module00/ex01/PhoneBook.cpp || cmake_object_order_depends_target_phonebook
+build CMakeFiles/phonebook.dir/module00/ex01/PhoneBook.cpp.o: CXX_COMPILER__phonebook_unscanned_Debug /home/trimia/Desktop/cpp/module00/ex01/PhoneBook.cpp || cmake_object_order_depends_target_phonebook
   DEP_FILE = CMakeFiles/phonebook.dir/module00/ex01/PhoneBook.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/phonebook.dir
   OBJECT_FILE_DIR = CMakeFiles/phonebook.dir/module00/ex01
 
-build CMakeFiles/phonebook.dir/module00/ex01/Contact.cpp.o: CXX_COMPILER__phonebook_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module00/ex01/Contact.cpp || cmake_object_order_depends_target_phonebook
+build CMakeFiles/phonebook.dir/module00/ex01/Contact.cpp.o: CXX_COMPILER__phonebook_unscanned_Debug /home/trimia/Desktop/cpp/module00/ex01/Contact.cpp || cmake_object_order_depends_target_phonebook
   DEP_FILE = CMakeFiles/phonebook.dir/module00/ex01/Contact.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/phonebook.dir
   OBJECT_FILE_DIR = CMakeFiles/phonebook.dir/module00/ex01
 
-build CMakeFiles/phonebook.dir/module00/ex01/main.cpp.o: CXX_COMPILER__phonebook_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module00/ex01/main.cpp || cmake_object_order_depends_target_phonebook
+build CMakeFiles/phonebook.dir/module00/ex01/main.cpp.o: CXX_COMPILER__phonebook_unscanned_Debug /home/trimia/Desktop/cpp/module00/ex01/main.cpp || cmake_object_order_depends_target_phonebook
   DEP_FILE = CMakeFiles/phonebook.dir/module00/ex01/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/phonebook.dir
@@ -129,25 +129,25 @@ build phonebook: CXX_EXECUTABLE_LINKER__phonebook_Debug CMakeFiles/phonebook.dir
 
 build cmake_object_order_depends_target_BraiiiiiiinnnzzzZ: phony || CMakeFiles/BraiiiiiiinnnzzzZ.dir
 
-build CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/main.cpp.o: CXX_COMPILER__BraiiiiiiinnnzzzZ_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex00/main.cpp || cmake_object_order_depends_target_BraiiiiiiinnnzzzZ
+build CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/main.cpp.o: CXX_COMPILER__BraiiiiiiinnnzzzZ_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex00/main.cpp || cmake_object_order_depends_target_BraiiiiiiinnnzzzZ
   DEP_FILE = CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/BraiiiiiiinnnzzzZ.dir
   OBJECT_FILE_DIR = CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00
 
-build CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/Zombie.cpp.o: CXX_COMPILER__BraiiiiiiinnnzzzZ_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex00/Zombie.cpp || cmake_object_order_depends_target_BraiiiiiiinnnzzzZ
+build CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/Zombie.cpp.o: CXX_COMPILER__BraiiiiiiinnnzzzZ_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex00/Zombie.cpp || cmake_object_order_depends_target_BraiiiiiiinnnzzzZ
   DEP_FILE = CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/Zombie.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/BraiiiiiiinnnzzzZ.dir
   OBJECT_FILE_DIR = CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00
 
-build CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/newZombie.cpp.o: CXX_COMPILER__BraiiiiiiinnnzzzZ_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex00/newZombie.cpp || cmake_object_order_depends_target_BraiiiiiiinnnzzzZ
+build CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/newZombie.cpp.o: CXX_COMPILER__BraiiiiiiinnnzzzZ_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex00/newZombie.cpp || cmake_object_order_depends_target_BraiiiiiiinnnzzzZ
   DEP_FILE = CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/newZombie.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/BraiiiiiiinnnzzzZ.dir
   OBJECT_FILE_DIR = CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00
 
-build CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/randomChump.cpp.o: CXX_COMPILER__BraiiiiiiinnnzzzZ_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex00/randomChump.cpp || cmake_object_order_depends_target_BraiiiiiiinnnzzzZ
+build CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/randomChump.cpp.o: CXX_COMPILER__BraiiiiiiinnnzzzZ_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex00/randomChump.cpp || cmake_object_order_depends_target_BraiiiiiiinnnzzzZ
   DEP_FILE = CMakeFiles/BraiiiiiiinnnzzzZ.dir/module01/ex00/randomChump.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/BraiiiiiiinnnzzzZ.dir
@@ -178,31 +178,31 @@ build BraiiiiiiinnnzzzZ: CXX_EXECUTABLE_LINKER__BraiiiiiiinnnzzzZ_Debug CMakeFil
 
 build cmake_object_order_depends_target_Moar_brainz: phony || CMakeFiles/Moar_brainz.dir
 
-build CMakeFiles/Moar_brainz.dir/module01/ex01/main.cpp.o: CXX_COMPILER__Moar_brainz_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex01/main.cpp || cmake_object_order_depends_target_Moar_brainz
+build CMakeFiles/Moar_brainz.dir/module01/ex01/main.cpp.o: CXX_COMPILER__Moar_brainz_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex01/main.cpp || cmake_object_order_depends_target_Moar_brainz
   DEP_FILE = CMakeFiles/Moar_brainz.dir/module01/ex01/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Moar_brainz.dir
   OBJECT_FILE_DIR = CMakeFiles/Moar_brainz.dir/module01/ex01
 
-build CMakeFiles/Moar_brainz.dir/module01/ex01/Zombie.cpp.o: CXX_COMPILER__Moar_brainz_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex01/Zombie.cpp || cmake_object_order_depends_target_Moar_brainz
+build CMakeFiles/Moar_brainz.dir/module01/ex01/Zombie.cpp.o: CXX_COMPILER__Moar_brainz_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex01/Zombie.cpp || cmake_object_order_depends_target_Moar_brainz
   DEP_FILE = CMakeFiles/Moar_brainz.dir/module01/ex01/Zombie.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Moar_brainz.dir
   OBJECT_FILE_DIR = CMakeFiles/Moar_brainz.dir/module01/ex01
 
-build CMakeFiles/Moar_brainz.dir/module01/ex01/newZombie.cpp.o: CXX_COMPILER__Moar_brainz_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex01/newZombie.cpp || cmake_object_order_depends_target_Moar_brainz
+build CMakeFiles/Moar_brainz.dir/module01/ex01/newZombie.cpp.o: CXX_COMPILER__Moar_brainz_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex01/newZombie.cpp || cmake_object_order_depends_target_Moar_brainz
   DEP_FILE = CMakeFiles/Moar_brainz.dir/module01/ex01/newZombie.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Moar_brainz.dir
   OBJECT_FILE_DIR = CMakeFiles/Moar_brainz.dir/module01/ex01
 
-build CMakeFiles/Moar_brainz.dir/module01/ex01/randomChump.cpp.o: CXX_COMPILER__Moar_brainz_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex01/randomChump.cpp || cmake_object_order_depends_target_Moar_brainz
+build CMakeFiles/Moar_brainz.dir/module01/ex01/randomChump.cpp.o: CXX_COMPILER__Moar_brainz_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex01/randomChump.cpp || cmake_object_order_depends_target_Moar_brainz
   DEP_FILE = CMakeFiles/Moar_brainz.dir/module01/ex01/randomChump.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Moar_brainz.dir
   OBJECT_FILE_DIR = CMakeFiles/Moar_brainz.dir/module01/ex01
 
-build CMakeFiles/Moar_brainz.dir/module01/ex01/zombieHorde.cpp.o: CXX_COMPILER__Moar_brainz_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex01/zombieHorde.cpp || cmake_object_order_depends_target_Moar_brainz
+build CMakeFiles/Moar_brainz.dir/module01/ex01/zombieHorde.cpp.o: CXX_COMPILER__Moar_brainz_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex01/zombieHorde.cpp || cmake_object_order_depends_target_Moar_brainz
   DEP_FILE = CMakeFiles/Moar_brainz.dir/module01/ex01/zombieHorde.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Moar_brainz.dir
@@ -233,7 +233,7 @@ build Moar_brainz: CXX_EXECUTABLE_LINKER__Moar_brainz_Debug CMakeFiles/Moar_brai
 
 build cmake_object_order_depends_target_HI_THIS_IS_BRAIN: phony || CMakeFiles/HI_THIS_IS_BRAIN.dir
 
-build CMakeFiles/HI_THIS_IS_BRAIN.dir/module01/ex02/main.cpp.o: CXX_COMPILER__HI_THIS_IS_BRAIN_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex02/main.cpp || cmake_object_order_depends_target_HI_THIS_IS_BRAIN
+build CMakeFiles/HI_THIS_IS_BRAIN.dir/module01/ex02/main.cpp.o: CXX_COMPILER__HI_THIS_IS_BRAIN_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex02/main.cpp || cmake_object_order_depends_target_HI_THIS_IS_BRAIN
   DEP_FILE = CMakeFiles/HI_THIS_IS_BRAIN.dir/module01/ex02/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/HI_THIS_IS_BRAIN.dir
@@ -264,25 +264,25 @@ build HI_THIS_IS_BRAIN: CXX_EXECUTABLE_LINKER__HI_THIS_IS_BRAIN_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Unnecessary_violence: phony || CMakeFiles/Unnecessary_violence.dir
 
-build CMakeFiles/Unnecessary_violence.dir/module01/ex03/Weapon.cpp.o: CXX_COMPILER__Unnecessary_violence_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex03/Weapon.cpp || cmake_object_order_depends_target_Unnecessary_violence
+build CMakeFiles/Unnecessary_violence.dir/module01/ex03/Weapon.cpp.o: CXX_COMPILER__Unnecessary_violence_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex03/Weapon.cpp || cmake_object_order_depends_target_Unnecessary_violence
   DEP_FILE = CMakeFiles/Unnecessary_violence.dir/module01/ex03/Weapon.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Unnecessary_violence.dir
   OBJECT_FILE_DIR = CMakeFiles/Unnecessary_violence.dir/module01/ex03
 
-build CMakeFiles/Unnecessary_violence.dir/module01/ex03/HumanA.cpp.o: CXX_COMPILER__Unnecessary_violence_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex03/HumanA.cpp || cmake_object_order_depends_target_Unnecessary_violence
+build CMakeFiles/Unnecessary_violence.dir/module01/ex03/HumanA.cpp.o: CXX_COMPILER__Unnecessary_violence_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex03/HumanA.cpp || cmake_object_order_depends_target_Unnecessary_violence
   DEP_FILE = CMakeFiles/Unnecessary_violence.dir/module01/ex03/HumanA.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Unnecessary_violence.dir
   OBJECT_FILE_DIR = CMakeFiles/Unnecessary_violence.dir/module01/ex03
 
-build CMakeFiles/Unnecessary_violence.dir/module01/ex03/HumanB.cpp.o: CXX_COMPILER__Unnecessary_violence_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex03/HumanB.cpp || cmake_object_order_depends_target_Unnecessary_violence
+build CMakeFiles/Unnecessary_violence.dir/module01/ex03/HumanB.cpp.o: CXX_COMPILER__Unnecessary_violence_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex03/HumanB.cpp || cmake_object_order_depends_target_Unnecessary_violence
   DEP_FILE = CMakeFiles/Unnecessary_violence.dir/module01/ex03/HumanB.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Unnecessary_violence.dir
   OBJECT_FILE_DIR = CMakeFiles/Unnecessary_violence.dir/module01/ex03
 
-build CMakeFiles/Unnecessary_violence.dir/module01/ex03/main.cpp.o: CXX_COMPILER__Unnecessary_violence_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex03/main.cpp || cmake_object_order_depends_target_Unnecessary_violence
+build CMakeFiles/Unnecessary_violence.dir/module01/ex03/main.cpp.o: CXX_COMPILER__Unnecessary_violence_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex03/main.cpp || cmake_object_order_depends_target_Unnecessary_violence
   DEP_FILE = CMakeFiles/Unnecessary_violence.dir/module01/ex03/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Unnecessary_violence.dir
@@ -313,7 +313,7 @@ build Unnecessary_violence: CXX_EXECUTABLE_LINKER__Unnecessary_violence_Debug CM
 
 build cmake_object_order_depends_target_Sed_is_for_losers: phony || CMakeFiles/Sed_is_for_losers.dir
 
-build CMakeFiles/Sed_is_for_losers.dir/module01/ex04/main.cpp.o: CXX_COMPILER__Sed_is_for_losers_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex04/main.cpp || cmake_object_order_depends_target_Sed_is_for_losers
+build CMakeFiles/Sed_is_for_losers.dir/module01/ex04/main.cpp.o: CXX_COMPILER__Sed_is_for_losers_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex04/main.cpp || cmake_object_order_depends_target_Sed_is_for_losers
   DEP_FILE = CMakeFiles/Sed_is_for_losers.dir/module01/ex04/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Sed_is_for_losers.dir
@@ -344,13 +344,13 @@ build Sed_is_for_losers: CXX_EXECUTABLE_LINKER__Sed_is_for_losers_Debug CMakeFil
 
 build cmake_object_order_depends_target_Harl_2.0: phony || CMakeFiles/Harl_2.0.dir
 
-build CMakeFiles/Harl_2.0.dir/module01/ex05/Harl.cpp.o: CXX_COMPILER__Harl_2.2e0_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex05/Harl.cpp || cmake_object_order_depends_target_Harl_2.0
+build CMakeFiles/Harl_2.0.dir/module01/ex05/Harl.cpp.o: CXX_COMPILER__Harl_2.2e0_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex05/Harl.cpp || cmake_object_order_depends_target_Harl_2.0
   DEP_FILE = CMakeFiles/Harl_2.0.dir/module01/ex05/Harl.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Harl_2.0.dir
   OBJECT_FILE_DIR = CMakeFiles/Harl_2.0.dir/module01/ex05
 
-build CMakeFiles/Harl_2.0.dir/module01/ex05/main.cpp.o: CXX_COMPILER__Harl_2.2e0_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex05/main.cpp || cmake_object_order_depends_target_Harl_2.0
+build CMakeFiles/Harl_2.0.dir/module01/ex05/main.cpp.o: CXX_COMPILER__Harl_2.2e0_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex05/main.cpp || cmake_object_order_depends_target_Harl_2.0
   DEP_FILE = CMakeFiles/Harl_2.0.dir/module01/ex05/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Harl_2.0.dir
@@ -381,13 +381,13 @@ build Harl_2.0: CXX_EXECUTABLE_LINKER__Harl_2.2e0_Debug CMakeFiles/Harl_2.0.dir/
 
 build cmake_object_order_depends_target_Harl_2.0.1: phony || CMakeFiles/Harl_2.0.1.dir
 
-build CMakeFiles/Harl_2.0.1.dir/module01/ex06/Harl.cpp.o: CXX_COMPILER__Harl_2.2e0.2e1_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex06/Harl.cpp || cmake_object_order_depends_target_Harl_2.0.1
+build CMakeFiles/Harl_2.0.1.dir/module01/ex06/Harl.cpp.o: CXX_COMPILER__Harl_2.2e0.2e1_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex06/Harl.cpp || cmake_object_order_depends_target_Harl_2.0.1
   DEP_FILE = CMakeFiles/Harl_2.0.1.dir/module01/ex06/Harl.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Harl_2.0.1.dir
   OBJECT_FILE_DIR = CMakeFiles/Harl_2.0.1.dir/module01/ex06
 
-build CMakeFiles/Harl_2.0.1.dir/module01/ex06/main.cpp.o: CXX_COMPILER__Harl_2.2e0.2e1_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module01/ex06/main.cpp || cmake_object_order_depends_target_Harl_2.0.1
+build CMakeFiles/Harl_2.0.1.dir/module01/ex06/main.cpp.o: CXX_COMPILER__Harl_2.2e0.2e1_unscanned_Debug /home/trimia/Desktop/cpp/module01/ex06/main.cpp || cmake_object_order_depends_target_Harl_2.0.1
   DEP_FILE = CMakeFiles/Harl_2.0.1.dir/module01/ex06/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Harl_2.0.1.dir
@@ -418,13 +418,13 @@ build Harl_2.0.1: CXX_EXECUTABLE_LINKER__Harl_2.2e0.2e1_Debug CMakeFiles/Harl_2.
 
 build cmake_object_order_depends_target_Fixed00: phony || CMakeFiles/Fixed00.dir
 
-build CMakeFiles/Fixed00.dir/module02/ex00/Fixed.cpp.o: CXX_COMPILER__Fixed00_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module02/ex00/Fixed.cpp || cmake_object_order_depends_target_Fixed00
+build CMakeFiles/Fixed00.dir/module02/ex00/Fixed.cpp.o: CXX_COMPILER__Fixed00_unscanned_Debug /home/trimia/Desktop/cpp/module02/ex00/Fixed.cpp || cmake_object_order_depends_target_Fixed00
   DEP_FILE = CMakeFiles/Fixed00.dir/module02/ex00/Fixed.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Fixed00.dir
   OBJECT_FILE_DIR = CMakeFiles/Fixed00.dir/module02/ex00
 
-build CMakeFiles/Fixed00.dir/module02/ex00/main.cpp.o: CXX_COMPILER__Fixed00_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module02/ex00/main.cpp || cmake_object_order_depends_target_Fixed00
+build CMakeFiles/Fixed00.dir/module02/ex00/main.cpp.o: CXX_COMPILER__Fixed00_unscanned_Debug /home/trimia/Desktop/cpp/module02/ex00/main.cpp || cmake_object_order_depends_target_Fixed00
   DEP_FILE = CMakeFiles/Fixed00.dir/module02/ex00/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Fixed00.dir
@@ -455,13 +455,13 @@ build Fixed00: CXX_EXECUTABLE_LINKER__Fixed00_Debug CMakeFiles/Fixed00.dir/modul
 
 build cmake_object_order_depends_target_Fixed01: phony || CMakeFiles/Fixed01.dir
 
-build CMakeFiles/Fixed01.dir/module02/ex01/Fixed.cpp.o: CXX_COMPILER__Fixed01_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module02/ex01/Fixed.cpp || cmake_object_order_depends_target_Fixed01
+build CMakeFiles/Fixed01.dir/module02/ex01/Fixed.cpp.o: CXX_COMPILER__Fixed01_unscanned_Debug /home/trimia/Desktop/cpp/module02/ex01/Fixed.cpp || cmake_object_order_depends_target_Fixed01
   DEP_FILE = CMakeFiles/Fixed01.dir/module02/ex01/Fixed.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Fixed01.dir
   OBJECT_FILE_DIR = CMakeFiles/Fixed01.dir/module02/ex01
 
-build CMakeFiles/Fixed01.dir/module02/ex01/main.cpp.o: CXX_COMPILER__Fixed01_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module02/ex01/main.cpp || cmake_object_order_depends_target_Fixed01
+build CMakeFiles/Fixed01.dir/module02/ex01/main.cpp.o: CXX_COMPILER__Fixed01_unscanned_Debug /home/trimia/Desktop/cpp/module02/ex01/main.cpp || cmake_object_order_depends_target_Fixed01
   DEP_FILE = CMakeFiles/Fixed01.dir/module02/ex01/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Fixed01.dir
@@ -492,13 +492,13 @@ build Fixed01: CXX_EXECUTABLE_LINKER__Fixed01_Debug CMakeFiles/Fixed01.dir/modul
 
 build cmake_object_order_depends_target_Fixed02: phony || CMakeFiles/Fixed02.dir
 
-build CMakeFiles/Fixed02.dir/module02/ex02/Fixed.cpp.o: CXX_COMPILER__Fixed02_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module02/ex02/Fixed.cpp || cmake_object_order_depends_target_Fixed02
+build CMakeFiles/Fixed02.dir/module02/ex02/Fixed.cpp.o: CXX_COMPILER__Fixed02_unscanned_Debug /home/trimia/Desktop/cpp/module02/ex02/Fixed.cpp || cmake_object_order_depends_target_Fixed02
   DEP_FILE = CMakeFiles/Fixed02.dir/module02/ex02/Fixed.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Fixed02.dir
   OBJECT_FILE_DIR = CMakeFiles/Fixed02.dir/module02/ex02
 
-build CMakeFiles/Fixed02.dir/module02/ex02/main.cpp.o: CXX_COMPILER__Fixed02_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module02/ex02/main.cpp || cmake_object_order_depends_target_Fixed02
+build CMakeFiles/Fixed02.dir/module02/ex02/main.cpp.o: CXX_COMPILER__Fixed02_unscanned_Debug /home/trimia/Desktop/cpp/module02/ex02/main.cpp || cmake_object_order_depends_target_Fixed02
   DEP_FILE = CMakeFiles/Fixed02.dir/module02/ex02/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Fixed02.dir
@@ -529,19 +529,19 @@ build Fixed02: CXX_EXECUTABLE_LINKER__Fixed02_Debug CMakeFiles/Fixed02.dir/modul
 
 build cmake_object_order_depends_target_claptrap: phony || CMakeFiles/claptrap.dir
 
-build CMakeFiles/claptrap.dir/module03/ex00/ClapTrap.cpp.o: CXX_COMPILER__claptrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex00/ClapTrap.cpp || cmake_object_order_depends_target_claptrap
+build CMakeFiles/claptrap.dir/module03/ex00/ClapTrap.cpp.o: CXX_COMPILER__claptrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex00/ClapTrap.cpp || cmake_object_order_depends_target_claptrap
   DEP_FILE = CMakeFiles/claptrap.dir/module03/ex00/ClapTrap.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/claptrap.dir
   OBJECT_FILE_DIR = CMakeFiles/claptrap.dir/module03/ex00
 
-build CMakeFiles/claptrap.dir/module03/ex00/main.cpp.o: CXX_COMPILER__claptrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex00/main.cpp || cmake_object_order_depends_target_claptrap
+build CMakeFiles/claptrap.dir/module03/ex00/main.cpp.o: CXX_COMPILER__claptrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex00/main.cpp || cmake_object_order_depends_target_claptrap
   DEP_FILE = CMakeFiles/claptrap.dir/module03/ex00/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/claptrap.dir
   OBJECT_FILE_DIR = CMakeFiles/claptrap.dir/module03/ex00
 
-build CMakeFiles/claptrap.dir/module03/ex00/Borderlands.cpp.o: CXX_COMPILER__claptrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex00/Borderlands.cpp || cmake_object_order_depends_target_claptrap
+build CMakeFiles/claptrap.dir/module03/ex00/Borderlands.cpp.o: CXX_COMPILER__claptrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex00/Borderlands.cpp || cmake_object_order_depends_target_claptrap
   DEP_FILE = CMakeFiles/claptrap.dir/module03/ex00/Borderlands.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/claptrap.dir
@@ -572,25 +572,25 @@ build claptrap: CXX_EXECUTABLE_LINKER__claptrap_Debug CMakeFiles/claptrap.dir/mo
 
 build cmake_object_order_depends_target_scavtrap: phony || CMakeFiles/scavtrap.dir
 
-build CMakeFiles/scavtrap.dir/module03/ex01/Borderlands.cpp.o: CXX_COMPILER__scavtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex01/Borderlands.cpp || cmake_object_order_depends_target_scavtrap
+build CMakeFiles/scavtrap.dir/module03/ex01/Borderlands.cpp.o: CXX_COMPILER__scavtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex01/Borderlands.cpp || cmake_object_order_depends_target_scavtrap
   DEP_FILE = CMakeFiles/scavtrap.dir/module03/ex01/Borderlands.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/scavtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/scavtrap.dir/module03/ex01
 
-build CMakeFiles/scavtrap.dir/module03/ex01/ClapTrap.cpp.o: CXX_COMPILER__scavtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex01/ClapTrap.cpp || cmake_object_order_depends_target_scavtrap
+build CMakeFiles/scavtrap.dir/module03/ex01/ClapTrap.cpp.o: CXX_COMPILER__scavtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex01/ClapTrap.cpp || cmake_object_order_depends_target_scavtrap
   DEP_FILE = CMakeFiles/scavtrap.dir/module03/ex01/ClapTrap.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/scavtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/scavtrap.dir/module03/ex01
 
-build CMakeFiles/scavtrap.dir/module03/ex01/main.cpp.o: CXX_COMPILER__scavtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex01/main.cpp || cmake_object_order_depends_target_scavtrap
+build CMakeFiles/scavtrap.dir/module03/ex01/main.cpp.o: CXX_COMPILER__scavtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex01/main.cpp || cmake_object_order_depends_target_scavtrap
   DEP_FILE = CMakeFiles/scavtrap.dir/module03/ex01/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/scavtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/scavtrap.dir/module03/ex01
 
-build CMakeFiles/scavtrap.dir/module03/ex01/ScavTrap.cpp.o: CXX_COMPILER__scavtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex01/ScavTrap.cpp || cmake_object_order_depends_target_scavtrap
+build CMakeFiles/scavtrap.dir/module03/ex01/ScavTrap.cpp.o: CXX_COMPILER__scavtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex01/ScavTrap.cpp || cmake_object_order_depends_target_scavtrap
   DEP_FILE = CMakeFiles/scavtrap.dir/module03/ex01/ScavTrap.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/scavtrap.dir
@@ -621,31 +621,31 @@ build scavtrap: CXX_EXECUTABLE_LINKER__scavtrap_Debug CMakeFiles/scavtrap.dir/mo
 
 build cmake_object_order_depends_target_fragtrap: phony || CMakeFiles/fragtrap.dir
 
-build CMakeFiles/fragtrap.dir/module03/ex02/Borderlands.cpp.o: CXX_COMPILER__fragtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex02/Borderlands.cpp || cmake_object_order_depends_target_fragtrap
+build CMakeFiles/fragtrap.dir/module03/ex02/Borderlands.cpp.o: CXX_COMPILER__fragtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex02/Borderlands.cpp || cmake_object_order_depends_target_fragtrap
   DEP_FILE = CMakeFiles/fragtrap.dir/module03/ex02/Borderlands.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/fragtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/fragtrap.dir/module03/ex02
 
-build CMakeFiles/fragtrap.dir/module03/ex02/ClapTrap.cpp.o: CXX_COMPILER__fragtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex02/ClapTrap.cpp || cmake_object_order_depends_target_fragtrap
+build CMakeFiles/fragtrap.dir/module03/ex02/ClapTrap.cpp.o: CXX_COMPILER__fragtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex02/ClapTrap.cpp || cmake_object_order_depends_target_fragtrap
   DEP_FILE = CMakeFiles/fragtrap.dir/module03/ex02/ClapTrap.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/fragtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/fragtrap.dir/module03/ex02
 
-build CMakeFiles/fragtrap.dir/module03/ex02/ScavTrap.cpp.o: CXX_COMPILER__fragtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex02/ScavTrap.cpp || cmake_object_order_depends_target_fragtrap
+build CMakeFiles/fragtrap.dir/module03/ex02/ScavTrap.cpp.o: CXX_COMPILER__fragtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex02/ScavTrap.cpp || cmake_object_order_depends_target_fragtrap
   DEP_FILE = CMakeFiles/fragtrap.dir/module03/ex02/ScavTrap.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/fragtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/fragtrap.dir/module03/ex02
 
-build CMakeFiles/fragtrap.dir/module03/ex02/main.cpp.o: CXX_COMPILER__fragtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex02/main.cpp || cmake_object_order_depends_target_fragtrap
+build CMakeFiles/fragtrap.dir/module03/ex02/main.cpp.o: CXX_COMPILER__fragtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex02/main.cpp || cmake_object_order_depends_target_fragtrap
   DEP_FILE = CMakeFiles/fragtrap.dir/module03/ex02/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/fragtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/fragtrap.dir/module03/ex02
 
-build CMakeFiles/fragtrap.dir/module03/ex02/FragTrap.cpp.o: CXX_COMPILER__fragtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex02/FragTrap.cpp || cmake_object_order_depends_target_fragtrap
+build CMakeFiles/fragtrap.dir/module03/ex02/FragTrap.cpp.o: CXX_COMPILER__fragtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex02/FragTrap.cpp || cmake_object_order_depends_target_fragtrap
   DEP_FILE = CMakeFiles/fragtrap.dir/module03/ex02/FragTrap.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/fragtrap.dir
@@ -676,37 +676,37 @@ build fragtrap: CXX_EXECUTABLE_LINKER__fragtrap_Debug CMakeFiles/fragtrap.dir/mo
 
 build cmake_object_order_depends_target_diamondtrap: phony || CMakeFiles/diamondtrap.dir
 
-build CMakeFiles/diamondtrap.dir/module03/ex03/Borderlands.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex03/Borderlands.cpp || cmake_object_order_depends_target_diamondtrap
+build CMakeFiles/diamondtrap.dir/module03/ex03/Borderlands.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex03/Borderlands.cpp || cmake_object_order_depends_target_diamondtrap
   DEP_FILE = CMakeFiles/diamondtrap.dir/module03/ex03/Borderlands.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/diamondtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/diamondtrap.dir/module03/ex03
 
-build CMakeFiles/diamondtrap.dir/module03/ex03/ClapTrap.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex03/ClapTrap.cpp || cmake_object_order_depends_target_diamondtrap
+build CMakeFiles/diamondtrap.dir/module03/ex03/ClapTrap.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex03/ClapTrap.cpp || cmake_object_order_depends_target_diamondtrap
   DEP_FILE = CMakeFiles/diamondtrap.dir/module03/ex03/ClapTrap.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/diamondtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/diamondtrap.dir/module03/ex03
 
-build CMakeFiles/diamondtrap.dir/module03/ex03/FragTrap.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex03/FragTrap.cpp || cmake_object_order_depends_target_diamondtrap
+build CMakeFiles/diamondtrap.dir/module03/ex03/FragTrap.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex03/FragTrap.cpp || cmake_object_order_depends_target_diamondtrap
   DEP_FILE = CMakeFiles/diamondtrap.dir/module03/ex03/FragTrap.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/diamondtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/diamondtrap.dir/module03/ex03
 
-build CMakeFiles/diamondtrap.dir/module03/ex03/ScavTrap.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex03/ScavTrap.cpp || cmake_object_order_depends_target_diamondtrap
+build CMakeFiles/diamondtrap.dir/module03/ex03/ScavTrap.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex03/ScavTrap.cpp || cmake_object_order_depends_target_diamondtrap
   DEP_FILE = CMakeFiles/diamondtrap.dir/module03/ex03/ScavTrap.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/diamondtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/diamondtrap.dir/module03/ex03
 
-build CMakeFiles/diamondtrap.dir/module03/ex03/main.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex03/main.cpp || cmake_object_order_depends_target_diamondtrap
+build CMakeFiles/diamondtrap.dir/module03/ex03/main.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex03/main.cpp || cmake_object_order_depends_target_diamondtrap
   DEP_FILE = CMakeFiles/diamondtrap.dir/module03/ex03/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/diamondtrap.dir
   OBJECT_FILE_DIR = CMakeFiles/diamondtrap.dir/module03/ex03
 
-build CMakeFiles/diamondtrap.dir/module03/ex03/DiamondTrap.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module03/ex03/DiamondTrap.cpp || cmake_object_order_depends_target_diamondtrap
+build CMakeFiles/diamondtrap.dir/module03/ex03/DiamondTrap.cpp.o: CXX_COMPILER__diamondtrap_unscanned_Debug /home/trimia/Desktop/cpp/module03/ex03/DiamondTrap.cpp || cmake_object_order_depends_target_diamondtrap
   DEP_FILE = CMakeFiles/diamondtrap.dir/module03/ex03/DiamondTrap.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/diamondtrap.dir
@@ -737,37 +737,37 @@ build diamondtrap: CXX_EXECUTABLE_LINKER__diamondtrap_Debug CMakeFiles/diamondtr
 
 build cmake_object_order_depends_target_Polymorphism: phony || CMakeFiles/Polymorphism.dir
 
-build CMakeFiles/Polymorphism.dir/module04/ex00/Animal.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex00/Animal.cpp || cmake_object_order_depends_target_Polymorphism
+build CMakeFiles/Polymorphism.dir/module04/ex00/Animal.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex00/Animal.cpp || cmake_object_order_depends_target_Polymorphism
   DEP_FILE = CMakeFiles/Polymorphism.dir/module04/ex00/Animal.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Polymorphism.dir
   OBJECT_FILE_DIR = CMakeFiles/Polymorphism.dir/module04/ex00
 
-build CMakeFiles/Polymorphism.dir/module04/ex00/Cat.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex00/Cat.cpp || cmake_object_order_depends_target_Polymorphism
+build CMakeFiles/Polymorphism.dir/module04/ex00/Cat.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex00/Cat.cpp || cmake_object_order_depends_target_Polymorphism
   DEP_FILE = CMakeFiles/Polymorphism.dir/module04/ex00/Cat.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Polymorphism.dir
   OBJECT_FILE_DIR = CMakeFiles/Polymorphism.dir/module04/ex00
 
-build CMakeFiles/Polymorphism.dir/module04/ex00/Dog.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex00/Dog.cpp || cmake_object_order_depends_target_Polymorphism
+build CMakeFiles/Polymorphism.dir/module04/ex00/Dog.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex00/Dog.cpp || cmake_object_order_depends_target_Polymorphism
   DEP_FILE = CMakeFiles/Polymorphism.dir/module04/ex00/Dog.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Polymorphism.dir
   OBJECT_FILE_DIR = CMakeFiles/Polymorphism.dir/module04/ex00
 
-build CMakeFiles/Polymorphism.dir/module04/ex00/WrongAnimal.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex00/WrongAnimal.cpp || cmake_object_order_depends_target_Polymorphism
+build CMakeFiles/Polymorphism.dir/module04/ex00/WrongAnimal.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex00/WrongAnimal.cpp || cmake_object_order_depends_target_Polymorphism
   DEP_FILE = CMakeFiles/Polymorphism.dir/module04/ex00/WrongAnimal.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Polymorphism.dir
   OBJECT_FILE_DIR = CMakeFiles/Polymorphism.dir/module04/ex00
 
-build CMakeFiles/Polymorphism.dir/module04/ex00/WrongCat.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex00/WrongCat.cpp || cmake_object_order_depends_target_Polymorphism
+build CMakeFiles/Polymorphism.dir/module04/ex00/WrongCat.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex00/WrongCat.cpp || cmake_object_order_depends_target_Polymorphism
   DEP_FILE = CMakeFiles/Polymorphism.dir/module04/ex00/WrongCat.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Polymorphism.dir
   OBJECT_FILE_DIR = CMakeFiles/Polymorphism.dir/module04/ex00
 
-build CMakeFiles/Polymorphism.dir/module04/ex00/main.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex00/main.cpp || cmake_object_order_depends_target_Polymorphism
+build CMakeFiles/Polymorphism.dir/module04/ex00/main.cpp.o: CXX_COMPILER__Polymorphism_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex00/main.cpp || cmake_object_order_depends_target_Polymorphism
   DEP_FILE = CMakeFiles/Polymorphism.dir/module04/ex00/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Polymorphism.dir
@@ -798,43 +798,43 @@ build Polymorphism: CXX_EXECUTABLE_LINKER__Polymorphism_Debug CMakeFiles/Polymor
 
 build cmake_object_order_depends_target_world_on_fire: phony || CMakeFiles/world_on_fire.dir
 
-build CMakeFiles/world_on_fire.dir/module04/ex01/Animal.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex01/Animal.cpp || cmake_object_order_depends_target_world_on_fire
+build CMakeFiles/world_on_fire.dir/module04/ex01/Animal.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex01/Animal.cpp || cmake_object_order_depends_target_world_on_fire
   DEP_FILE = CMakeFiles/world_on_fire.dir/module04/ex01/Animal.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/world_on_fire.dir
   OBJECT_FILE_DIR = CMakeFiles/world_on_fire.dir/module04/ex01
 
-build CMakeFiles/world_on_fire.dir/module04/ex01/Cat.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex01/Cat.cpp || cmake_object_order_depends_target_world_on_fire
+build CMakeFiles/world_on_fire.dir/module04/ex01/Cat.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex01/Cat.cpp || cmake_object_order_depends_target_world_on_fire
   DEP_FILE = CMakeFiles/world_on_fire.dir/module04/ex01/Cat.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/world_on_fire.dir
   OBJECT_FILE_DIR = CMakeFiles/world_on_fire.dir/module04/ex01
 
-build CMakeFiles/world_on_fire.dir/module04/ex01/Dog.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex01/Dog.cpp || cmake_object_order_depends_target_world_on_fire
+build CMakeFiles/world_on_fire.dir/module04/ex01/Dog.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex01/Dog.cpp || cmake_object_order_depends_target_world_on_fire
   DEP_FILE = CMakeFiles/world_on_fire.dir/module04/ex01/Dog.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/world_on_fire.dir
   OBJECT_FILE_DIR = CMakeFiles/world_on_fire.dir/module04/ex01
 
-build CMakeFiles/world_on_fire.dir/module04/ex01/WrongAnimal.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex01/WrongAnimal.cpp || cmake_object_order_depends_target_world_on_fire
+build CMakeFiles/world_on_fire.dir/module04/ex01/WrongAnimal.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex01/WrongAnimal.cpp || cmake_object_order_depends_target_world_on_fire
   DEP_FILE = CMakeFiles/world_on_fire.dir/module04/ex01/WrongAnimal.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/world_on_fire.dir
   OBJECT_FILE_DIR = CMakeFiles/world_on_fire.dir/module04/ex01
 
-build CMakeFiles/world_on_fire.dir/module04/ex01/main.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex01/main.cpp || cmake_object_order_depends_target_world_on_fire
+build CMakeFiles/world_on_fire.dir/module04/ex01/main.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex01/main.cpp || cmake_object_order_depends_target_world_on_fire
   DEP_FILE = CMakeFiles/world_on_fire.dir/module04/ex01/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/world_on_fire.dir
   OBJECT_FILE_DIR = CMakeFiles/world_on_fire.dir/module04/ex01
 
-build CMakeFiles/world_on_fire.dir/module04/ex01/Brain.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex01/Brain.cpp || cmake_object_order_depends_target_world_on_fire
+build CMakeFiles/world_on_fire.dir/module04/ex01/Brain.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex01/Brain.cpp || cmake_object_order_depends_target_world_on_fire
   DEP_FILE = CMakeFiles/world_on_fire.dir/module04/ex01/Brain.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/world_on_fire.dir
   OBJECT_FILE_DIR = CMakeFiles/world_on_fire.dir/module04/ex01
 
-build CMakeFiles/world_on_fire.dir/module04/ex01/WrongCat.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex01/WrongCat.cpp || cmake_object_order_depends_target_world_on_fire
+build CMakeFiles/world_on_fire.dir/module04/ex01/WrongCat.cpp.o: CXX_COMPILER__world_on_fire_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex01/WrongCat.cpp || cmake_object_order_depends_target_world_on_fire
   DEP_FILE = CMakeFiles/world_on_fire.dir/module04/ex01/WrongCat.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/world_on_fire.dir
@@ -865,43 +865,43 @@ build world_on_fire: CXX_EXECUTABLE_LINKER__world_on_fire_Debug CMakeFiles/world
 
 build cmake_object_order_depends_target_Abstract_class: phony || CMakeFiles/Abstract_class.dir
 
-build CMakeFiles/Abstract_class.dir/module04/ex02/Animal.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex02/Animal.cpp || cmake_object_order_depends_target_Abstract_class
+build CMakeFiles/Abstract_class.dir/module04/ex02/Animal.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex02/Animal.cpp || cmake_object_order_depends_target_Abstract_class
   DEP_FILE = CMakeFiles/Abstract_class.dir/module04/ex02/Animal.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Abstract_class.dir
   OBJECT_FILE_DIR = CMakeFiles/Abstract_class.dir/module04/ex02
 
-build CMakeFiles/Abstract_class.dir/module04/ex02/Brain.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex02/Brain.cpp || cmake_object_order_depends_target_Abstract_class
+build CMakeFiles/Abstract_class.dir/module04/ex02/Brain.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex02/Brain.cpp || cmake_object_order_depends_target_Abstract_class
   DEP_FILE = CMakeFiles/Abstract_class.dir/module04/ex02/Brain.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Abstract_class.dir
   OBJECT_FILE_DIR = CMakeFiles/Abstract_class.dir/module04/ex02
 
-build CMakeFiles/Abstract_class.dir/module04/ex02/Cat.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex02/Cat.cpp || cmake_object_order_depends_target_Abstract_class
+build CMakeFiles/Abstract_class.dir/module04/ex02/Cat.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex02/Cat.cpp || cmake_object_order_depends_target_Abstract_class
   DEP_FILE = CMakeFiles/Abstract_class.dir/module04/ex02/Cat.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Abstract_class.dir
   OBJECT_FILE_DIR = CMakeFiles/Abstract_class.dir/module04/ex02
 
-build CMakeFiles/Abstract_class.dir/module04/ex02/Dog.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex02/Dog.cpp || cmake_object_order_depends_target_Abstract_class
+build CMakeFiles/Abstract_class.dir/module04/ex02/Dog.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex02/Dog.cpp || cmake_object_order_depends_target_Abstract_class
   DEP_FILE = CMakeFiles/Abstract_class.dir/module04/ex02/Dog.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Abstract_class.dir
   OBJECT_FILE_DIR = CMakeFiles/Abstract_class.dir/module04/ex02
 
-build CMakeFiles/Abstract_class.dir/module04/ex02/WrongAnimal.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex02/WrongAnimal.cpp || cmake_object_order_depends_target_Abstract_class
+build CMakeFiles/Abstract_class.dir/module04/ex02/WrongAnimal.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex02/WrongAnimal.cpp || cmake_object_order_depends_target_Abstract_class
   DEP_FILE = CMakeFiles/Abstract_class.dir/module04/ex02/WrongAnimal.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Abstract_class.dir
   OBJECT_FILE_DIR = CMakeFiles/Abstract_class.dir/module04/ex02
 
-build CMakeFiles/Abstract_class.dir/module04/ex02/WrongCat.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex02/WrongCat.cpp || cmake_object_order_depends_target_Abstract_class
+build CMakeFiles/Abstract_class.dir/module04/ex02/WrongCat.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex02/WrongCat.cpp || cmake_object_order_depends_target_Abstract_class
   DEP_FILE = CMakeFiles/Abstract_class.dir/module04/ex02/WrongCat.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Abstract_class.dir
   OBJECT_FILE_DIR = CMakeFiles/Abstract_class.dir/module04/ex02
 
-build CMakeFiles/Abstract_class.dir/module04/ex02/main.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex02/main.cpp || cmake_object_order_depends_target_Abstract_class
+build CMakeFiles/Abstract_class.dir/module04/ex02/main.cpp.o: CXX_COMPILER__Abstract_class_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex02/main.cpp || cmake_object_order_depends_target_Abstract_class
   DEP_FILE = CMakeFiles/Abstract_class.dir/module04/ex02/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Abstract_class.dir
@@ -932,37 +932,37 @@ build Abstract_class: CXX_EXECUTABLE_LINKER__Abstract_class_Debug CMakeFiles/Abs
 
 build cmake_object_order_depends_target_Interface_recap: phony || CMakeFiles/Interface_recap.dir
 
-build CMakeFiles/Interface_recap.dir/module04/ex03/AMateria.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex03/AMateria.cpp || cmake_object_order_depends_target_Interface_recap
+build CMakeFiles/Interface_recap.dir/module04/ex03/AMateria.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex03/AMateria.cpp || cmake_object_order_depends_target_Interface_recap
   DEP_FILE = CMakeFiles/Interface_recap.dir/module04/ex03/AMateria.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Interface_recap.dir
   OBJECT_FILE_DIR = CMakeFiles/Interface_recap.dir/module04/ex03
 
-build CMakeFiles/Interface_recap.dir/module04/ex03/main.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex03/main.cpp || cmake_object_order_depends_target_Interface_recap
+build CMakeFiles/Interface_recap.dir/module04/ex03/main.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex03/main.cpp || cmake_object_order_depends_target_Interface_recap
   DEP_FILE = CMakeFiles/Interface_recap.dir/module04/ex03/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Interface_recap.dir
   OBJECT_FILE_DIR = CMakeFiles/Interface_recap.dir/module04/ex03
 
-build CMakeFiles/Interface_recap.dir/module04/ex03/Cure.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex03/Cure.cpp || cmake_object_order_depends_target_Interface_recap
+build CMakeFiles/Interface_recap.dir/module04/ex03/Cure.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex03/Cure.cpp || cmake_object_order_depends_target_Interface_recap
   DEP_FILE = CMakeFiles/Interface_recap.dir/module04/ex03/Cure.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Interface_recap.dir
   OBJECT_FILE_DIR = CMakeFiles/Interface_recap.dir/module04/ex03
 
-build CMakeFiles/Interface_recap.dir/module04/ex03/Ice.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex03/Ice.cpp || cmake_object_order_depends_target_Interface_recap
+build CMakeFiles/Interface_recap.dir/module04/ex03/Ice.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex03/Ice.cpp || cmake_object_order_depends_target_Interface_recap
   DEP_FILE = CMakeFiles/Interface_recap.dir/module04/ex03/Ice.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Interface_recap.dir
   OBJECT_FILE_DIR = CMakeFiles/Interface_recap.dir/module04/ex03
 
-build CMakeFiles/Interface_recap.dir/module04/ex03/Character.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex03/Character.cpp || cmake_object_order_depends_target_Interface_recap
+build CMakeFiles/Interface_recap.dir/module04/ex03/Character.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex03/Character.cpp || cmake_object_order_depends_target_Interface_recap
   DEP_FILE = CMakeFiles/Interface_recap.dir/module04/ex03/Character.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Interface_recap.dir
   OBJECT_FILE_DIR = CMakeFiles/Interface_recap.dir/module04/ex03
 
-build CMakeFiles/Interface_recap.dir/module04/ex03/MateriaSource.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module04/ex03/MateriaSource.cpp || cmake_object_order_depends_target_Interface_recap
+build CMakeFiles/Interface_recap.dir/module04/ex03/MateriaSource.cpp.o: CXX_COMPILER__Interface_recap_unscanned_Debug /home/trimia/Desktop/cpp/module04/ex03/MateriaSource.cpp || cmake_object_order_depends_target_Interface_recap
   DEP_FILE = CMakeFiles/Interface_recap.dir/module04/ex03/MateriaSource.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Interface_recap.dir
@@ -993,13 +993,13 @@ build Interface_recap: CXX_EXECUTABLE_LINKER__Interface_recap_Debug CMakeFiles/I
 
 build cmake_object_order_depends_target_Bureaucrat: phony || CMakeFiles/Bureaucrat.dir
 
-build CMakeFiles/Bureaucrat.dir/module05/ex00/Bureaucrat.cpp.o: CXX_COMPILER__Bureaucrat_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex00/Bureaucrat.cpp || cmake_object_order_depends_target_Bureaucrat
+build CMakeFiles/Bureaucrat.dir/module05/ex00/Bureaucrat.cpp.o: CXX_COMPILER__Bureaucrat_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex00/Bureaucrat.cpp || cmake_object_order_depends_target_Bureaucrat
   DEP_FILE = CMakeFiles/Bureaucrat.dir/module05/ex00/Bureaucrat.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Bureaucrat.dir
   OBJECT_FILE_DIR = CMakeFiles/Bureaucrat.dir/module05/ex00
 
-build CMakeFiles/Bureaucrat.dir/module05/ex00/main.cpp.o: CXX_COMPILER__Bureaucrat_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex00/main.cpp || cmake_object_order_depends_target_Bureaucrat
+build CMakeFiles/Bureaucrat.dir/module05/ex00/main.cpp.o: CXX_COMPILER__Bureaucrat_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex00/main.cpp || cmake_object_order_depends_target_Bureaucrat
   DEP_FILE = CMakeFiles/Bureaucrat.dir/module05/ex00/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Bureaucrat.dir
@@ -1030,19 +1030,19 @@ build Bureaucrat: CXX_EXECUTABLE_LINKER__Bureaucrat_Debug CMakeFiles/Bureaucrat.
 
 build cmake_object_order_depends_target_Form: phony || CMakeFiles/Form.dir
 
-build CMakeFiles/Form.dir/module05/ex01/Bureaucrat.cpp.o: CXX_COMPILER__Form_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex01/Bureaucrat.cpp || cmake_object_order_depends_target_Form
+build CMakeFiles/Form.dir/module05/ex01/Bureaucrat.cpp.o: CXX_COMPILER__Form_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex01/Bureaucrat.cpp || cmake_object_order_depends_target_Form
   DEP_FILE = CMakeFiles/Form.dir/module05/ex01/Bureaucrat.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Form.dir
   OBJECT_FILE_DIR = CMakeFiles/Form.dir/module05/ex01
 
-build CMakeFiles/Form.dir/module05/ex01/Form.cpp.o: CXX_COMPILER__Form_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex01/Form.cpp || cmake_object_order_depends_target_Form
+build CMakeFiles/Form.dir/module05/ex01/Form.cpp.o: CXX_COMPILER__Form_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex01/Form.cpp || cmake_object_order_depends_target_Form
   DEP_FILE = CMakeFiles/Form.dir/module05/ex01/Form.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Form.dir
   OBJECT_FILE_DIR = CMakeFiles/Form.dir/module05/ex01
 
-build CMakeFiles/Form.dir/module05/ex01/main.cpp.o: CXX_COMPILER__Form_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex01/main.cpp || cmake_object_order_depends_target_Form
+build CMakeFiles/Form.dir/module05/ex01/main.cpp.o: CXX_COMPILER__Form_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex01/main.cpp || cmake_object_order_depends_target_Form
   DEP_FILE = CMakeFiles/Form.dir/module05/ex01/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Form.dir
@@ -1073,37 +1073,37 @@ build Form: CXX_EXECUTABLE_LINKER__Form_Debug CMakeFiles/Form.dir/module05/ex01/
 
 build cmake_object_order_depends_target_AForm: phony || CMakeFiles/AForm.dir
 
-build CMakeFiles/AForm.dir/module05/ex02/Bureaucrat.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex02/Bureaucrat.cpp || cmake_object_order_depends_target_AForm
+build CMakeFiles/AForm.dir/module05/ex02/Bureaucrat.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/Bureaucrat.cpp || cmake_object_order_depends_target_AForm
   DEP_FILE = CMakeFiles/AForm.dir/module05/ex02/Bureaucrat.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/AForm.dir
   OBJECT_FILE_DIR = CMakeFiles/AForm.dir/module05/ex02
 
-build CMakeFiles/AForm.dir/module05/ex02/AForm.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex02/AForm.cpp || cmake_object_order_depends_target_AForm
+build CMakeFiles/AForm.dir/module05/ex02/AForm.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/AForm.cpp || cmake_object_order_depends_target_AForm
   DEP_FILE = CMakeFiles/AForm.dir/module05/ex02/AForm.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/AForm.dir
   OBJECT_FILE_DIR = CMakeFiles/AForm.dir/module05/ex02
 
-build CMakeFiles/AForm.dir/module05/ex02/main.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex02/main.cpp || cmake_object_order_depends_target_AForm
+build CMakeFiles/AForm.dir/module05/ex02/main.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/main.cpp || cmake_object_order_depends_target_AForm
   DEP_FILE = CMakeFiles/AForm.dir/module05/ex02/main.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/AForm.dir
   OBJECT_FILE_DIR = CMakeFiles/AForm.dir/module05/ex02
 
-build CMakeFiles/AForm.dir/module05/ex02/ShrubberyCreationForm.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex02/ShrubberyCreationForm.cpp || cmake_object_order_depends_target_AForm
+build CMakeFiles/AForm.dir/module05/ex02/ShrubberyCreationForm.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/ShrubberyCreationForm.cpp || cmake_object_order_depends_target_AForm
   DEP_FILE = CMakeFiles/AForm.dir/module05/ex02/ShrubberyCreationForm.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/AForm.dir
   OBJECT_FILE_DIR = CMakeFiles/AForm.dir/module05/ex02
 
-build CMakeFiles/AForm.dir/module05/ex02/PresidentialPardonForm.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex02/PresidentialPardonForm.cpp || cmake_object_order_depends_target_AForm
+build CMakeFiles/AForm.dir/module05/ex02/PresidentialPardonForm.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/PresidentialPardonForm.cpp || cmake_object_order_depends_target_AForm
   DEP_FILE = CMakeFiles/AForm.dir/module05/ex02/PresidentialPardonForm.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/AForm.dir
   OBJECT_FILE_DIR = CMakeFiles/AForm.dir/module05/ex02
 
-build CMakeFiles/AForm.dir/module05/ex02/RobotomyRequestForm.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /nfs/homes/mmariani/Desktop/cpp/module05/ex02/RobotomyRequestForm.cpp || cmake_object_order_depends_target_AForm
+build CMakeFiles/AForm.dir/module05/ex02/RobotomyRequestForm.cpp.o: CXX_COMPILER__AForm_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/RobotomyRequestForm.cpp || cmake_object_order_depends_target_AForm
   DEP_FILE = CMakeFiles/AForm.dir/module05/ex02/RobotomyRequestForm.cpp.o.d
   FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/AForm.dir
@@ -1125,12 +1125,122 @@ build AForm: CXX_EXECUTABLE_LINKER__AForm_Debug CMakeFiles/AForm.dir/module05/ex
   TARGET_FILE = AForm
   TARGET_PDB = AForm.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target intern
+
+
+#############################################
+# Order-only phony target for intern
+
+build cmake_object_order_depends_target_intern: phony || CMakeFiles/intern.dir
+
+build CMakeFiles/intern.dir/module05/ex02/Bureaucrat.cpp.o: CXX_COMPILER__intern_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/Bureaucrat.cpp || cmake_object_order_depends_target_intern
+  DEP_FILE = CMakeFiles/intern.dir/module05/ex02/Bureaucrat.cpp.o.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/intern.dir
+  OBJECT_FILE_DIR = CMakeFiles/intern.dir/module05/ex02
+
+build CMakeFiles/intern.dir/module05/ex02/AForm.cpp.o: CXX_COMPILER__intern_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/AForm.cpp || cmake_object_order_depends_target_intern
+  DEP_FILE = CMakeFiles/intern.dir/module05/ex02/AForm.cpp.o.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/intern.dir
+  OBJECT_FILE_DIR = CMakeFiles/intern.dir/module05/ex02
+
+build CMakeFiles/intern.dir/module05/ex02/main.cpp.o: CXX_COMPILER__intern_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/main.cpp || cmake_object_order_depends_target_intern
+  DEP_FILE = CMakeFiles/intern.dir/module05/ex02/main.cpp.o.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/intern.dir
+  OBJECT_FILE_DIR = CMakeFiles/intern.dir/module05/ex02
+
+build CMakeFiles/intern.dir/module05/ex02/ShrubberyCreationForm.cpp.o: CXX_COMPILER__intern_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/ShrubberyCreationForm.cpp || cmake_object_order_depends_target_intern
+  DEP_FILE = CMakeFiles/intern.dir/module05/ex02/ShrubberyCreationForm.cpp.o.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/intern.dir
+  OBJECT_FILE_DIR = CMakeFiles/intern.dir/module05/ex02
+
+build CMakeFiles/intern.dir/module05/ex02/PresidentialPardonForm.cpp.o: CXX_COMPILER__intern_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/PresidentialPardonForm.cpp || cmake_object_order_depends_target_intern
+  DEP_FILE = CMakeFiles/intern.dir/module05/ex02/PresidentialPardonForm.cpp.o.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/intern.dir
+  OBJECT_FILE_DIR = CMakeFiles/intern.dir/module05/ex02
+
+build CMakeFiles/intern.dir/module05/ex02/RobotomyRequestForm.cpp.o: CXX_COMPILER__intern_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex02/RobotomyRequestForm.cpp || cmake_object_order_depends_target_intern
+  DEP_FILE = CMakeFiles/intern.dir/module05/ex02/RobotomyRequestForm.cpp.o.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/intern.dir
+  OBJECT_FILE_DIR = CMakeFiles/intern.dir/module05/ex02
+
+build CMakeFiles/intern.dir/module05/ex03/Intern.cpp.o: CXX_COMPILER__intern_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex03/Intern.cpp || cmake_object_order_depends_target_intern
+  DEP_FILE = CMakeFiles/intern.dir/module05/ex03/Intern.cpp.o.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/intern.dir
+  OBJECT_FILE_DIR = CMakeFiles/intern.dir/module05/ex03
+
+build CMakeFiles/intern.dir/module05/ex03/main.cpp.o: CXX_COMPILER__intern_unscanned_Debug /home/trimia/Desktop/cpp/module05/ex03/main.cpp || cmake_object_order_depends_target_intern
+  DEP_FILE = CMakeFiles/intern.dir/module05/ex03/main.cpp.o.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/intern.dir
+  OBJECT_FILE_DIR = CMakeFiles/intern.dir/module05/ex03
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target intern
+
+
+#############################################
+# Link the executable intern
+
+build intern: CXX_EXECUTABLE_LINKER__intern_Debug CMakeFiles/intern.dir/module05/ex02/Bureaucrat.cpp.o CMakeFiles/intern.dir/module05/ex02/AForm.cpp.o CMakeFiles/intern.dir/module05/ex02/main.cpp.o CMakeFiles/intern.dir/module05/ex02/ShrubberyCreationForm.cpp.o CMakeFiles/intern.dir/module05/ex02/PresidentialPardonForm.cpp.o CMakeFiles/intern.dir/module05/ex02/RobotomyRequestForm.cpp.o CMakeFiles/intern.dir/module05/ex03/Intern.cpp.o CMakeFiles/intern.dir/module05/ex03/main.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/intern.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = intern
+  TARGET_PDB = intern.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Cast
+
+
+#############################################
+# Order-only phony target for Cast
+
+build cmake_object_order_depends_target_Cast: phony || CMakeFiles/Cast.dir
+
+build CMakeFiles/Cast.dir/module06/ex00/main.cpp.o: CXX_COMPILER__Cast_unscanned_Debug /home/trimia/Desktop/cpp/module06/ex00/main.cpp || cmake_object_order_depends_target_Cast
+  DEP_FILE = CMakeFiles/Cast.dir/module06/ex00/main.cpp.o.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Cast.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cast.dir/module06/ex00
+
+build CMakeFiles/Cast.dir/module06/ex00/ScalarConverter.cpp.o: CXX_COMPILER__Cast_unscanned_Debug /home/trimia/Desktop/cpp/module06/ex00/ScalarConverter.cpp || cmake_object_order_depends_target_Cast
+  DEP_FILE = CMakeFiles/Cast.dir/module06/ex00/ScalarConverter.cpp.o.d
+  FLAGS = -g -std=gnu++98 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Cast.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cast.dir/module06/ex00
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Cast
+
+
+#############################################
+# Link the executable Cast
+
+build Cast: CXX_EXECUTABLE_LINKER__Cast_Debug CMakeFiles/Cast.dir/module06/ex00/main.cpp.o CMakeFiles/Cast.dir/module06/ex00/ScalarConverter.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/Cast.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Cast
+  TARGET_PDB = Cast.dbg
+
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /nfs/homes/mmariani/Desktop/cpp/cmake-build-debug && /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/trimia/Desktop/cpp/cmake-build-debug && /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1141,7 +1251,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /nfs/homes/mmariani/Desktop/cpp/cmake-build-debug && /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/nfs/homes/mmariani/Desktop/cpp -B/nfs/homes/mmariani/Desktop/cpp/cmake-build-debug
+  COMMAND = cd /home/trimia/Desktop/cpp/cmake-build-debug && /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/trimia/Desktop/cpp -B/home/trimia/Desktop/cpp/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1157,9 +1267,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /nfs/homes/mmariani/Desktop/cpp/cmake-build-debug
+# Folder: /home/trimia/Desktop/cpp/cmake-build-debug
 
-build all: phony megaphone phonebook BraiiiiiiinnnzzzZ Moar_brainz HI_THIS_IS_BRAIN Unnecessary_violence Sed_is_for_losers Harl_2.0 Harl_2.0.1 Fixed00 Fixed01 Fixed02 claptrap scavtrap fragtrap diamondtrap Polymorphism world_on_fire Abstract_class Interface_recap Bureaucrat Form AForm
+build all: phony megaphone phonebook BraiiiiiiinnnzzzZ Moar_brainz HI_THIS_IS_BRAIN Unnecessary_violence Sed_is_for_losers Harl_2.0 Harl_2.0.1 Fixed00 Fixed01 Fixed02 claptrap scavtrap fragtrap diamondtrap Polymorphism world_on_fire Abstract_class Interface_recap Bureaucrat Form AForm intern Cast
 
 # =============================================================================
 # Built-in targets
@@ -1168,14 +1278,14 @@ build all: phony megaphone phonebook BraiiiiiiinnnzzzZ Moar_brainz HI_THIS_IS_BR
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /nfs/homes/mmariani/Desktop/cpp/CMakeLists.txt /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/trimia/Desktop/cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /nfs/homes/mmariani/Desktop/cpp/CMakeLists.txt /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/trimia/Desktop/cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

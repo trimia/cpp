@@ -1,14 +1,14 @@
-#include "Form.hpp"
+#include "AForm.hpp"
 
-Form::Form()
+AForm::AForm()
 {
     this->_name="Default";
     this->_requireToSign=150;
     this->_requireToExecute=150;
     this->_signed=false;
-	std::cout << "Form : Default Constructor Called" << std::endl;
+	std::cout << "AForm : Default Constructor Called" << std::endl;
 }
-Form::Form(std::string name, int requireToSign, int requireToExecute) {
+AForm::AForm(std::string name, int requireToSign, int requireToExecute) {
     this->_name=name;
     if(requireToSign<1 || requireToExecute<1) throw GradeTooHighException();
     if(requireToSign>150 || requireToExecute>150) throw GradeTooLowException();
@@ -16,19 +16,19 @@ Form::Form(std::string name, int requireToSign, int requireToExecute) {
     this->_requireToExecute=requireToExecute;
     this->_signed=false;
 }
-Form::~Form()
+AForm::~AForm()
 {
-	std::cout << "Form : Destructor Called" << std::endl;
+	std::cout << "AForm : Destructor Called" << std::endl;
 }
 
-Form::Form(Form const &obj)
+AForm::AForm(AForm const &obj)
 {
 	std::cout << "Copy Constructor Called" << std::endl;
 	if (this != &obj)
 		*this = obj;
 }
 
-Form	&Form::operator= (const Form &obj)
+AForm	&AForm::operator= (const AForm &obj)
 {
 	std::cout << "Copy Assignment Operator Called" << std::endl;
 	if (this != &obj)
@@ -43,19 +43,19 @@ Form	&Form::operator= (const Form &obj)
 	}
 	return (*this);
 }
-std::string Form::getName() const{
+std::string AForm::getName() const{
     return _name;
 }
-bool Form::isSigned() const {
+bool AForm::isSigned() const {
     return _signed;
 }
-int Form::getRequiredGradeToSign() const {
+int AForm::getRequiredGradeToSign() const {
     return _requireToSign;
 }
-int Form::getRequiredGradeToExecute() const {
+int AForm::getRequiredGradeToExecute() const {
     return _requireToExecute;
 }
-void Form::beSigned(Bureaucrat &bureaucrat) {
+void AForm::beSigned(Bureaucrat &bureaucrat) {
     try {
         if(bureaucrat.getGrade() >= this->_requireToSign)
             throw GradeTooLowException();
@@ -68,7 +68,7 @@ void Form::beSigned(Bureaucrat &bureaucrat) {
 
     this->_signed = true;
 }
-std::ostream &operator<<(std::ostream &os,const Form &form) {
+std::ostream &operator<<(std::ostream &os,const AForm &form) {
     os << form.getName() << ",  form is signed: " <<std::boolalpha <<form.isSigned() << ", required grade to sign: " << form.getRequiredGradeToSign() << ", required grade to execute: " << form.getRequiredGradeToExecute() << std::endl;
 //    std::cout<<os<<std::endl;
     return os;

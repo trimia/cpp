@@ -26,3 +26,5 @@ add_executable(Interface_recap module04/ex03/AMateria.cpp module04/ex03/main.cpp
 add_executable(Bureaucrat module05/ex00/Bureaucrat.cpp module05/ex00/main.cpp module05/ex00/BureaucreatException.hpp module05/ex00/include.h)
 add_executable(Form module05/ex01/Bureaucrat.cpp module05/ex01/Form.cpp module05/ex01/main.cpp)
 add_executable(AForm module05/ex02/Bureaucrat.cpp module05/ex02/AForm.cpp module05/ex02/main.cpp  module05/ex02/ShrubberyCreationForm.cpp module05/ex02/PresidentialPardonForm.cpp module05/ex02/RobotomyRequestForm.cpp)
+add_executable(intern module05/ex02/Bureaucrat.cpp module05/ex02/AForm.cpp module05/ex02/main.cpp  module05/ex02/ShrubberyCreationForm.cpp module05/ex02/PresidentialPardonForm.cpp module05/ex02/RobotomyRequestForm.cpp module05/ex03/Intern.cpp module05/ex03/main.cpp)
+add_executable(Cast module06/ex00/main.cpp module06/ex00/ScalarConverter.cpp)

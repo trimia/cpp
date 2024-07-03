@@ -1,5 +1,5 @@
-#ifndef _Form_HPP_
-#define _Form_HPP_
+#ifndef _AForm_HPP_
+#define _AForm_HPP_
 
 #include <iostream>
 #include "Bureaucrat.hpp"
@@ -9,19 +9,20 @@
 //                         CLASSES                         //
 // ****************************************************** //
 class Bureaucrat;
-class	Form
+class	AForm
 {
 	public	:
-		Form ();
-        Form (std::string name, int requireToSign, int requireToExecute);
-		Form (Form const &obj);
-		~Form ();
-		Form &operator= (const Form &obj);
-        std::string getName()const;
-        bool        isSigned()const;
-        int         getRequiredGradeToSign()const;
-        int         getRequiredGradeToExecute()const;
-        void        beSigned(Bureaucrat &bureaucrat);
+		AForm ();
+        AForm (std::string name,int requireToSign,int requireToExecute);
+		AForm (AForm const &obj);
+		virtual ~AForm ();
+		AForm &operator= (const AForm &obj);
+        std::string     getName()const;
+        bool            isSigned()const;
+        int             getRequiredGradeToSign()const;
+        int             getRequiredGradeToExecute()const;
+        void            beSigned(Bureaucrat &bureaucrat);
+        virtual void    execute(Bureaucrat const &executor) const=0;
     class GradeTooHighException : public std::exception {
     public:
         virtual const char* what() const throw() {
@@ -41,6 +42,12 @@ class	Form
             return "Form is already be signed";
         }
     };
+    class FormNotSignedException : public std::exception {
+    public:
+        virtual const char* what() const throw() {
+            return "Form is not yet signed";
+        }
+    };
 	private	:
         std::string _name;
         bool        _signed;
@@ -49,7 +56,7 @@ class	Form
 
 		//	DataType	attributes.
 };
-std::ostream &operator<<(std::ostream &os,const Form &form);
+std::ostream &operator<<(std::ostream &os,const AForm &form);
 
 
 // ******************************************************** //

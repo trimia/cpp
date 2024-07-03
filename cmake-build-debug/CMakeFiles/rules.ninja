@@ -449,6 +449,44 @@ rule CXX_EXECUTABLE_LINKER__AForm_Debug
 
 
 #############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__intern_unscanned_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ${LAUNCHER}${CODE_CHECK}/usr/bin/c++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX executable.
+
+rule CXX_EXECUTABLE_LINKER__intern_Debug
+  command = $PRE_LINK && /usr/bin/c++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  description = Linking CXX executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__Cast_unscanned_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ${LAUNCHER}${CODE_CHECK}/usr/bin/c++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX executable.
+
+rule CXX_EXECUTABLE_LINKER__Cast_Debug
+  command = $PRE_LINK && /usr/bin/c++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  description = Linking CXX executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
 # Rule for running custom commands.
 
 rule CUSTOM_COMMAND
@@ -460,7 +498,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/nfs/homes/mmariani/Desktop/cpp -B/nfs/homes/mmariani/Desktop/cpp/cmake-build-debug
+  command = /home/trimia/App/clion-2024.1.1/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/trimia/Desktop/cpp -B/home/trimia/Desktop/cpp/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
@@ -469,7 +507,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/ninja/linux/x64/ninja $FILE_ARG -t clean $TARGETS
+  command = /home/trimia/App/clion-2024.1.1/bin/ninja/linux/x64/ninja $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -477,6 +515,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = /nfs/sgoinfre/goinfre/Perso/mmariani/clion-2024.1.4/bin/ninja/linux/x64/ninja -t targets
+  command = /home/trimia/App/clion-2024.1.1/bin/ninja/linux/x64/ninja -t targets
   description = All primary targets available:
 

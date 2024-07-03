@@ -79,23 +79,49 @@ void Bureaucrat::decrementGrade() {
     }
     this->_grade++;
 }
-void Bureaucrat::signForm(Form &form) {
+void Bureaucrat::signForm(AForm *form) {
     try {
-        if(this->getGrade() > form.getRequiredGradeToSign()){
+        if(form==NULL)
+        {
+            std::cout<<this->getName()<<" couldn´t sign form because, Form didn´t exist"<<std::endl;
+            return;
+        }
+        if(this->getGrade() > form->getRequiredGradeToSign()){
             throw GradeTooLowException();
         }
-        if(form.isSigned()){
-            throw Form::AlredySignedException();
+        if(form->isSigned()){
+            throw AForm::AlredySignedException();
         }
-
-
     } catch(const std::exception &e){
-        std::cout<<this->getName()<<" couldn´t sign "<<form.getName()<<" because "<<e.what()<<std::endl;
+        std::cout<<this->getName()<<" couldn´t sign "<<form->getName()<<" because "<<e.what()<<std::endl;
         return;
     }
-    form.beSigned(*this);
-    std::cout<<this->getName()<<" signed "<<form.getName()<<std::endl;
+    form->beSigned(*this);
+    std::cout<<this->getName()<<" signed "<<form->getName()<<std::endl;
 }
+
+void Bureaucrat::executeForm(AForm const *form) {
+    try {
+        if(form==NULL)
+        {
+            std::cout<<this->getName()<<" couldn´t sign form because, Form didn´t exist"<<std::endl;
+            return;
+        }
+
+        if(this->getGrade() > form->getRequiredGradeToExecute()){
+            throw GradeTooLowException();
+        }
+        if(!form->isSigned()){
+            throw AForm::FormNotSignedException();
+        }
+    } catch(const std::exception &e){
+        std::cout<<this->getName()<<" couldn´t execute "<<form->getName()<<" because "<<e.what()<<std::endl;
+        return;
+    }
+    form->execute(*this);
+    std::cout<<this->getName()<<" executed "<<form->getName()<<std::endl;
+}
+
 std::ostream &operator<<(std::ostream &os,const Bureaucrat &bureaucrat) {
     os << bureaucrat.getName() << ",  bureaucrat grade " << bureaucrat.getGrade()<<"\n";
 //    std::cout<<os<<std::endl;
