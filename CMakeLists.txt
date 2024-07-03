@@ -23,3 +23,6 @@ add_executable(Polymorphism module04/ex00/Animal.cpp module04/ex00/Cat.cpp modul
 add_executable(world_on_fire module04/ex01/Animal.cpp module04/ex01/Cat.cpp module04/ex01/Dog.cpp module04/ex01/WrongAnimal.cpp module04/ex01/main.cpp module04/ex01/Brain.cpp module04/ex01/WrongCat.cpp)
 add_executable(Abstract_class module04/ex02/Animal.cpp module04/ex02/Brain.cpp module04/ex02/Cat.cpp module04/ex02/Dog.cpp module04/ex02/WrongAnimal.cpp module04/ex02/WrongCat.cpp module04/ex02/main.cpp)
 add_executable(Interface_recap module04/ex03/AMateria.cpp module04/ex03/main.cpp module04/ex03/Cure.cpp module04/ex03/Ice.cpp module04/ex03/Character.cpp module04/ex03/IMateriaSource.hpp module04/ex03/MateriaSource.cpp)
+add_executable(Bureaucrat module05/ex00/Bureaucrat.cpp module05/ex00/main.cpp module05/ex00/BureaucreatException.hpp module05/ex00/include.h)
+add_executable(Form module05/ex01/Bureaucrat.cpp module05/ex01/Form.cpp module05/ex01/main.cpp)
+add_executable(AForm module05/ex02/Bureaucrat.cpp module05/ex02/AForm.cpp module05/ex02/main.cpp  module05/ex02/ShrubberyCreationForm.cpp module05/ex02/PresidentialPardonForm.cpp module05/ex02/RobotomyRequestForm.cpp)
