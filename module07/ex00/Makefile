@@ -1,4 +1,4 @@
-NAME = convert
+NAME = template 
 
 CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98
 
@@ -8,7 +8,7 @@ STD = -std=c++98
 
 SRC = main.cpp
 
-INC =
+INC = Wathever.hpp
 
 OBJ = $(SRC:.cpp=.o) 
 

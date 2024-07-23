@@ -1,4 +1,4 @@
-NAME = convert
+NAME = serialize
 
 CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98
 

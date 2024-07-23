@@ -27,4 +27,10 @@ add_executable(Bureaucrat module05/ex00/Bureaucrat.cpp module05/ex00/main.cpp mo
 add_executable(Form module05/ex01/Bureaucrat.cpp module05/ex01/Form.cpp module05/ex01/main.cpp)
 add_executable(AForm module05/ex02/Bureaucrat.cpp module05/ex02/AForm.cpp module05/ex02/main.cpp  module05/ex02/ShrubberyCreationForm.cpp module05/ex02/PresidentialPardonForm.cpp module05/ex02/RobotomyRequestForm.cpp)
 add_executable(intern module05/ex02/Bureaucrat.cpp module05/ex02/AForm.cpp module05/ex02/main.cpp  module05/ex02/ShrubberyCreationForm.cpp module05/ex02/PresidentialPardonForm.cpp module05/ex02/RobotomyRequestForm.cpp module05/ex03/Intern.cpp module05/ex03/main.cpp)
-add_executable(Cast module06/ex00/main.cpp module06/ex00/ScalarConverter.cpp)
+add_executable(convert module06/ex00/main.cpp)
+add_executable(serialize module06/ex01/main.cpp)
+add_executable(identify module06/ex02/main.cpp module06/ex02/Base.hpp)
+add_executable(template module07/ex00/main.cpp)
+add_executable(iter module07/ex01/main.cpp)
+add_executable(array module07/ex02/main.cpp module07/ex02/Array.hpp module07/ex02/Array.tpp)
+

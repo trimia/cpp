@@ -1,4 +1,4 @@
-NAME = convert
+NAME = identify
 
 CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98
 
@@ -8,7 +8,7 @@ STD = -std=c++98
 
 SRC = main.cpp
 
-INC =
+INC = Base.hpp
 
 OBJ = $(SRC:.cpp=.o) 
 

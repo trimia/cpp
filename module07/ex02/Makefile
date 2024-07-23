@@ -1,6 +1,6 @@
-NAME = convert
+NAME = Array 
 
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address
 
 CC = c++ 
 
@@ -8,7 +8,7 @@ STD = -std=c++98
 
 SRC = main.cpp
 
-INC =
+INC = Array.hpp 
 
 OBJ = $(SRC:.cpp=.o) 
 
