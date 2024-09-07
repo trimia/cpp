@@ -28,16 +28,46 @@ Intern	&Intern::operator= (const Intern &obj)
 	return (*this);
 }
 
+enum FormType
+{
+    ROBOTOMY_REQUEST,
+    PRESIDENTIAL_PARDON,
+    SHRUBBERY_CREATION,
+    UNKNOWN_FORM
+};
+
+FormType getFormType(const std::string &formName)
+{
+    if (formName == "robotomy request")
+        return ROBOTOMY_REQUEST;
+    else if (formName == "presidential pardon")
+        return PRESIDENTIAL_PARDON;
+    else if (formName == "shrubbery creation")
+        return SHRUBBERY_CREATION;
+    else
+        return UNKNOWN_FORM;
+}
+
 AForm *Intern::makeForm(std::string formName, std::string target)
 {
-	AForm *form = NULL;
-	std::map<std::string, AForm *> formMap;
-	formMap["robotomy request"] = new RobotomyRequestForm(target);
-	formMap["presidential pardon"] = new PresidentialPardonForm(target);
-	formMap["shrubbery creation"] = new ShrubberyCreationForm(target);
-	if (formMap.find(formName) != formMap.end())
-		form = formMap[formName];
-	else
-		std::cout << "Intern : Form not found" << std::endl;
-	return (form);
+    AForm *form = NULL;
+    FormType formType = getFormType(formName);
+
+    switch (formType)
+    {
+        case ROBOTOMY_REQUEST:
+            form = new RobotomyRequestForm(target);
+            break;
+        case PRESIDENTIAL_PARDON:
+            form = new PresidentialPardonForm(target);
+            break;
+        case SHRUBBERY_CREATION:
+            form = new ShrubberyCreationForm(target);
+            break;
+        default:
+            std::cout << "Intern : Form not found" << std::endl;
+            break;
+    }
+
+    return form;
 }
