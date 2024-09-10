@@ -11,39 +11,48 @@
 
 class ScalarConverter {
 public:
-    static void convert(const std::string &literal) {
-        float f = 0;
-        double d = 0;
-        bool isFloat = false, isDouble = false;
+    static void convert(const std::string literal) {
+        float f = 0.0f;
+        double d = 0.0;
+        bool isFloat = false;
+        bool isDouble = false;
+        std::string str;
 
-        if (literal == "inf" || literal == "+inf") {
+        if (literal[0] == '\'' && literal[literal.size() - 1] == '\'') {
+            str = literal.substr(0, literal.size() - 1);
+        } else str = literal;
+        if (str == "inf" || str == "+inf") {
             f = std::numeric_limits<float>::infinity();
             d = std::numeric_limits<double>::infinity();
-            isFloat = true; isDouble = true;
-        } else if (literal == "-inf") {
+            isFloat = true;
+            isDouble = true;
+        } else if (str == "-inf") {
             f = -std::numeric_limits<float>::infinity();
             d = -std::numeric_limits<double>::infinity();
-            isFloat = true; isDouble = true;
-        } else if (literal == "inff" || literal == "+inff") {
+            isFloat = true;
+            isDouble = true;
+        } else if (str == "inff" || str == "+inff") {
             f = std::numeric_limits<float>::infinity();
             isFloat = true;
-        } else if (literal == "-inff") {
+        } else if (str == "-inff") {
             f = -std::numeric_limits<float>::infinity();
             isFloat = true;
-        } else if (literal == "nan" || literal == "nanf") {
+        } else if (str == "nan" || str == "nanf") {
             f = std::numeric_limits<float>::quiet_NaN();
             d = std::numeric_limits<double>::quiet_NaN();
-            isFloat = true; isDouble = true;
+            isFloat = true;
+            isDouble = true;
         } else {
-            std::istringstream isstr(literal);
+            std::istringstream isstr(str);
             if (!(isstr >> d)) {
-                isFloat = false; isDouble = false;
+                isFloat = false;
+                isDouble = false;
             } else {
                 f = static_cast<float>(d);
-                isFloat = true; isDouble = true;
+                isFloat = true;
+                isDouble = true;
             }
         }
-
         if (isFloat) {
             printFloat(f);
         } else {
@@ -54,22 +63,30 @@ public:
         } else {
             std::cout << "double: impossible" << std::endl;
         }
-        if (literal.length() == 3 && literal[0] == '\'' && literal[literal.size() - 1] == '\'') {
-            char c = literal[1];
-            printChar(c);
-            printFloat(c);
-            printDouble(c);
-        }
-        try {
-            int i = std::atoi(literal.c_str());
+        if(!isDigits(str) || str.size()<4){
+            char c = std::strtol(str.c_str(), NULL, 10);
+            try {
+                printChar(c);
 
-            printChar(i);
-            printInt(literal);
-        } catch (...) {
-            std::cout << "int: impossible" << std::endl;
-            std::cout << "char: impossible" << std::endl;
+            }catch (std::exception &e) {
+                std::cout << "char: impossible" << std::endl;
+            }
+            try {
+                printInt(str);
+            }catch (std::exception &e) {
+                std::cout << "int: impossible" << std::endl;
+            }
         }
     }
+
+    static bool isDigits(const std::string &str) {
+        for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) {
+            if (!std::isdigit(*it))
+                return false;
+        }
+        return true;
+    }
+
     static void printChar(char c) {
         if (std::isprint(c)) {
             std::cout << "char: " << c << std::endl;
