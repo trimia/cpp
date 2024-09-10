@@ -33,4 +33,9 @@ add_executable(identify module06/ex02/main.cpp module06/ex02/Base.hpp)
 add_executable(template module07/ex00/main.cpp)
 add_executable(iter module07/ex01/main.cpp)
 add_executable(array module07/ex02/main.cpp module07/ex02/Array.hpp module07/ex02/Array.tpp)
+add_executable(easyFind module08/ex00/main.cpp  module08/ex00/Easyfind.hpp)
+add_executable(span module08/ex01/main.cpp module08/ex01/Span.cpp module08/ex01/Span.hpp)
+add_executable(mutantstack module08/ex02/main.cpp module08/ex02/MutantStack.cpp module08/ex02/MutantStack.hpp)
+add_executable(btc module09/ex00/main.cpp module09/ex00/BitcoinExchange.cpp module09/ex00/BitcoinExchange.hpp module09/ex00/parse.cpp module09/ex00/parse.hpp)
+
 

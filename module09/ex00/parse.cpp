@@ -35,10 +35,12 @@ void Parse::parse(std::string str)
     }
 }
 
+
 void Parse::printMap()
 {
-    for (auto &i : this->_map)
-        std::cout << i.first << " : " << i.second << std::endl;
+    std::for_each(this->_map.begin(), this->_map.end(), [](const std::pair<std::string, std::string>& pair) {
+        std::cout << pair.first << " : " << pair.second << std::endl;
+    });
 }
 
 std::string Parse::getValue(std::string key)
@@ -61,11 +63,13 @@ std::map<std::string, std::string> Parse::getMap()
 // open file and parse data
 void Parse::parseFile(std::string filename)
 {
-    std::ifstream
-        file(filename);
+//    std::string path;
+//    patth=
+    std::ifstream file(filename.c_str());
+    std::cout<<"here we are"<<std::endl;
     if (!file.is_open())
     {
-        std::cerr << "Error: Could not open file" << std::endl;
+        std::cout<< "Error: Could not open file" << std::endl;
         return;
     }
     std::string line;
@@ -73,6 +77,8 @@ void Parse::parseFile(std::string filename)
     {
         this->parseCSV(line);
     }
+//    std::cout<<file
+    std::cout<<"line"<<line<<std::endl;
 }
 
 //parse data from .csv file formatted: data | exchangerate
@@ -88,6 +94,7 @@ void Parse::parseCSV(std::string str)
         pos = str.find(";");
         value = str.substr(0, pos);
         str.erase(0, pos + 1);
-        this->_map[key] = value;
+    this->_map[key] = value;
+    std::cout<<" key "<<key<<" value"<<value<<std::endl;
     }
 }

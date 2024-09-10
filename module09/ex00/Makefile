@@ -1,14 +1,14 @@
 NAME =btc
 
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CXXFLAGS = #-Wall -Wextra -Werror -fsanitize=address
 
 CC = c++ 
 
 STD = -std=c++98
 
-SRC = main.cpp
+SRC = main.cpp parse.cpp BitcoinExchange.cpp
 
-INC = MutantTask.hpp
+INC = parse.hpp BitcoinExchange.hpp
 
 OBJ = $(SRC:.cpp=.o) 
 

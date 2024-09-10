@@ -2,6 +2,7 @@
 #define BITCOINEXCHANGE_HPP
 
 #include "include.h"
+#include "parse.hpp"
 #include "iostream"
 #include "string"
 #include "map"
@@ -33,5 +34,6 @@ public:
     void printAll(std::string name);
     void printAll(double amount);
 
+    void setWallet(std::string name, double amount);
 };
 #endif

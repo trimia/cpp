@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <fstream>
+#include <algorithm>
 
 class Parse
 {
@@ -19,6 +21,10 @@ public:
     std::string getValue(std::string key);
     std::string getKey(std::string value);
     std::map<std::string, std::string> getMap();
+
+    void parseFile(std::string filename);
+
+    void parseCSV(std::string str);
 };
 
 #endif
