@@ -6,9 +6,9 @@ CC = c++
 
 STD = -std=c++98
 
-SRC = main.cpp parse.cpp BitcoinExchange.cpp
+SRC = main.cpp BitcoinExchange.cpp
 
-INC = parse.hpp BitcoinExchange.hpp
+INC = BitcoinExchange.hpp
 
 OBJ = $(SRC:.cpp=.o) 
 

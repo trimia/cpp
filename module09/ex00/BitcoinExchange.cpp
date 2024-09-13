@@ -2,75 +2,130 @@
 
 BitcoinExchange::BitcoinExchange()
 {
-
-}
-
-BitcoinExchange::BitcoinExchange(double exchangeRate)
-{
-
-}
-
-BitcoinExchange::BitcoinExchange(BitcoinExchange const &obj)
-{
-    this->_exchangeRate = obj._exchangeRate;
-    this->_wallet = obj._wallet;
-}
-
-BitcoinExchange &BitcoinExchange::operator=(BitcoinExchange const &obj)
-{
-    this->_exchangeRate = obj._exchangeRate;
-    this->_wallet = obj._wallet;
-    return (*this);
+    try
+    {
+        openFile("data.csv");
+    }
+    catch (...)
+    {
+        std::cout << "Error: Could not open csv file are you sure is in the root of the project?" << std::endl;
+    }
 }
 
 BitcoinExchange::~BitcoinExchange()
 {
 }
 
-void BitcoinExchange::setWallet(std::string name, double amount)
+BitcoinExchange &BitcoinExchange::operator=(BitcoinExchange const &obj)
 {
-    this->_wallet[name] = amount;
+    this->_exancheRateDb = obj._exancheRateDb;
+    this->_wallet = obj._wallet;
+    return (*this);
 }
 
-void BitcoinExchange::setExchangeRate(double exchangeRate)
+void BitcoinExchange::openFile(std::string filename)
 {
-    this->_exchangeRate = exchangeRate;
+    std::cout << "Opening file: " << filename << std::endl;
+    std::string shrinker="";
+    std::ifstream file(filename.c_str());
+    if (!file.is_open())
+    {
+        std::cout<< "Error: Could not open file" << std::endl;
+        return;
+    }
+    std::string line;
+    while (std::getline(file, line))
+    {
+        if(filename.find("csv") != std::string::npos)
+            shrinker = ",";
+        else
+            shrinker = "|";
+        this->parseFile(line, shrinker);
+    }
+
 }
 
-double BitcoinExchange::getWallet(std::string name) const
+void BitcoinExchange::parseFile(std::string str, std::string shrinker)
 {
-    return this->_wallet.at(name);
+    static int i = 0;
+    if (i==0)
+        std::cout << "Parsing file: " << str <<" shrinker " << shrinker << std::endl;
+    i++;
+    std::string key;
+    std::string value;
+    size_t pos = 0;
+    while ((pos = str.find(shrinker)) != std::string::npos)
+    {
+        key = str.substr(0, pos);
+        str.erase(0, pos + 1);
+        pos = str.find(";");
+        value = str.substr(0, pos);
+        str.erase(0, pos + 1);
+        if(shrinker==",")
+            this->_exancheRateDb[key] = std::stod(value);
+        else
+            fillWallet(key, std::stod(value));
+    }
 }
 
-double BitcoinExchange::getExchangeRate() const
-{
-    return this->_exchangeRate;
+bool isleapyear(unsigned short year){
+    return (!(year%4) && (year%100) || !(year%400));
 }
 
-void BitcoinExchange::convert(std::string name, double amount)
-{
-    this->_wallet[name] = amount / this->_exchangeRate;
+//1 valid, 0 invalid
+bool valid_date(unsigned short year,unsigned short month,unsigned short day){
+    unsigned short monthlen[]={31,28,31,30,31,30,31,31,30,31,30,31};
+    if (!year || !month || !day || month>12)
+        return 0;
+    if (isleapyear(year) && month==2)
+        monthlen[1]++;
+    if (day>monthlen[month-1])
+        return 0;
+    return 1;
 }
 
-void BitcoinExchange::convert(double amount)
+void BitcoinExchange::fillWallet(std::string key, double value)
 {
-    for (auto &i : this->_wallet)
-        i.second = amount / this->_exchangeRate;
+    std::cout << "Filling wallet: " << key << " : " << value << std::endl;
+    struct tm tm;
+    try
+    {
+        if (strptime(key.c_str(), "%Y-%m-%d", &tm))
+            throw std::invalid_argument("Invalid date in file.txt the format is YYYY-MM-DD");
+        if(value < 1000 && value>0)
+            throw std::invalid_argument("Invalid value in file.txt the value must be less than 1000 and greater than 0");
+        this->_wallet[key] = value;
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
 }
 
-void BitcoinExchange::convert(std::string name)
+void BitcoinExchange::printMap(std::map<std::string, double > map)
 {
-    this->_wallet[name] = this->_wallet[name] / this->_exchangeRate;
+    for (std::map<std::string, double>::iterator it = map.begin(); it != map.end(); ++it)
+    {
+        std::cout << it->first << " : " << it->second << std::endl;
+    }
 }
 
-void BitcoinExchange::convert()
+std::map<std::string, double> BitcoinExchange::get_exanche_rate_db() const
 {
-    for (auto &i : this->_wallet)
-        i.second = i.second / this->_exchangeRate;
+    return _exancheRateDb;
 }
 
-void BitcoinExchange::printWallet()
+void BitcoinExchange::set_exanche_rate_db(const std::map<std::string, double>& exanche_rate_db)
 {
-    for (auto &i : this->_wallet)
-        std::cout << i.first << ": " << i.second << std::endl;
+    _exancheRateDb = exanche_rate_db;
+}
+
+std::map<std::string, double> BitcoinExchange::get_wallet() const
+{
+    return _wallet;
+}
+
+void BitcoinExchange::set_wallet(const std::map<std::string, double>& wallet)
+{
+    _wallet = wallet;
 }

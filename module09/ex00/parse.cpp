@@ -35,12 +35,12 @@ void Parse::parse(std::string str)
     }
 }
 
-
 void Parse::printMap()
 {
-    std::for_each(this->_map.begin(), this->_map.end(), [](const std::pair<std::string, std::string>& pair) {
-        std::cout << pair.first << " : " << pair.second << std::endl;
-    });
+    for (std::map<std::string, std::string>::iterator it = this->_map.begin(); it != this->_map.end(); ++it)
+    {
+        std::cout << it->first << " : " << it->second << std::endl;
+    }
 }
 
 std::string Parse::getValue(std::string key)
@@ -60,13 +60,11 @@ std::map<std::string, std::string> Parse::getMap()
 {
     return this->_map;
 }
-// open file and parse data
-void Parse::parseFile(std::string filename)
+
+void ::openFile(std::string filename)
 {
-//    std::string path;
-//    patth=
+    std::string shrinker="";
     std::ifstream file(filename.c_str());
-    std::cout<<"here we are"<<std::endl;
     if (!file.is_open())
     {
         std::cout<< "Error: Could not open file" << std::endl;
@@ -75,19 +73,21 @@ void Parse::parseFile(std::string filename)
     std::string line;
     while (std::getline(file, line))
     {
-        this->parseCSV(line);
+        if(filename.find("csv") != std::string::npos)
+            shrinker = ",";
+        else
+            shrinker = "|";
+        this->parseFile(line, shrinker);
     }
-//    std::cout<<file
-    std::cout<<"line"<<line<<std::endl;
+
 }
 
-//parse data from .csv file formatted: data | exchangerate
-void Parse::parseCSV(std::string str)
+void ::parseFile(std::string str, std::string shrinker)
 {
     std::string key;
     std::string value;
     size_t pos = 0;
-    while ((pos = str.find("|")) != std::string::npos)
+    while ((pos = str.find(",")) != std::string::npos)
     {
         key = str.substr(0, pos);
         str.erase(0, pos + 1);
@@ -95,6 +95,5 @@ void Parse::parseCSV(std::string str)
         value = str.substr(0, pos);
         str.erase(0, pos + 1);
     this->_map[key] = value;
-    std::cout<<" key "<<key<<" value"<<value<<std::endl;
     }
 }

@@ -12,28 +12,21 @@
 class BitcoinExchange
 {
 private:
+    std::map<std::string, double> _exancheRateDb;
     std::map<std::string, double> _wallet;
-    double _exchangeRate;
 public:
 
     BitcoinExchange();
-    BitcoinExchange(double exchangeRate);
-    BitcoinExchange(BitcoinExchange const &obj);
-    BitcoinExchange &operator=(BitcoinExchange const &obj);
     ~BitcoinExchange();
-    void setExchangeRate(double exchangeRate);
-    double getWallet(std::string name) const;
-    double getExchangeRate() const;
-    void convert(std::string name, double amount);
-    void convert(double amount);
-    void convert(std::string name);
-    void convert();
-    void printWallet();
-    void printExchangeRate();
-    void printAll();
-    void printAll(std::string name);
-    void printAll(double amount);
+    BitcoinExchange &operator=(BitcoinExchange const &obj);
+    void openFile(std::string filename);
+    void parseFile(std::string str, std::string shrinker);
+    void fillWallet(std::string key, double value);
+    void printMap(std::map<std::string, double> map);
 
-    void setWallet(std::string name, double amount);
+    std::map<std::string, double> get_exanche_rate_db() const;
+    void set_exanche_rate_db(const std::map<std::string, double>& exanche_rate_db);
+    std::map<std::string, double> get_wallet() const;
+    void set_wallet(const std::map<std::string, double>& wallet);
 };
 #endif
