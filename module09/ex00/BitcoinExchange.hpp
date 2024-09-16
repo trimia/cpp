@@ -7,6 +7,7 @@
 #include "string"
 #include "map"
 #include "ctime"
+#include <sstream>
 
 
 class BitcoinExchange
@@ -19,7 +20,7 @@ public:
     BitcoinExchange();
     ~BitcoinExchange();
     BitcoinExchange &operator=(BitcoinExchange const &obj);
-    void openFile(std::string filename);
+    bool openFile(std::string filename);
     void parseFile(std::string str, std::string shrinker);
     void fillWallet(std::string key, double value);
     void printMap(std::map<std::string, double> map);

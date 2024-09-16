@@ -63,7 +63,7 @@ public:
         } else {
             std::cout << "double: impossible" << std::endl;
         }
-        if(!isDigits(str) || str.size()<4){
+
             char c = std::strtol(str.c_str(), NULL, 10);
             try {
                 printChar(c);
@@ -76,15 +76,6 @@ public:
             }catch (std::exception &e) {
                 std::cout << "int: impossible" << std::endl;
             }
-        }
-    }
-
-    static bool isDigits(const std::string &str) {
-        for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) {
-            if (!std::isdigit(*it))
-                return false;
-        }
-        return true;
     }
 
     static void printChar(char c) {
@@ -98,10 +89,10 @@ public:
     static void printInt(const std::string& literal) {
         std::istringstream iss(literal);
         float f;
-        if (!(iss >> f)) { // Attempt to read as float
+        if (!(iss >> f)) {
             std::cout << "int: impossible" << std::endl;
         } else {
-            int i = static_cast<int>(f);
+            int i =std::atoi(literal.c_str());
             if (f >= std::numeric_limits<int>::min() && f <= std::numeric_limits<int>::max() && f == static_cast<float>(i)) {
                 std::cout << "int: " << i << std::endl;
             } else {
@@ -112,9 +103,6 @@ public:
 
     static void printFloat(float f) {
         std::cout << "float: " << std::fixed << std::setprecision(1) << f<< "f";
-        if (!(std::isinf(f) || std::isnan(f))) {
-            std::cout << "f";
-        }
         std::cout << std::endl;
     }
 

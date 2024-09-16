@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     // parse.printMap();
     BitcoinExchange exchange;
     exchange.openFile(filename);
-    exchange.printMap(exchange.get_exanche_rate_db());
+//    exchange.printMap(exchange.get_exanche_rate_db());
     exchange.printMap(exchange.get_wallet());
     return 0;
 }

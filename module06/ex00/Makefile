@@ -1,10 +1,10 @@
 NAME = convert
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror
 
 CC = c++ 
 
-STD = #-std=c++98
+STD = -std=c++98
 
 SRC = main.cpp
 

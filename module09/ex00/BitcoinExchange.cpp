@@ -23,15 +23,15 @@ BitcoinExchange &BitcoinExchange::operator=(BitcoinExchange const &obj)
     return (*this);
 }
 
-void BitcoinExchange::openFile(std::string filename)
+bool BitcoinExchange::openFile(std::string filename)
 {
     std::cout << "Opening file: " << filename << std::endl;
-    std::string shrinker="";
+    std::string shrinker;
     std::ifstream file(filename.c_str());
     if (!file.is_open())
     {
         std::cout<< "Error: Could not open file" << std::endl;
-        return;
+        return false;
     }
     std::string line;
     while (std::getline(file, line))
@@ -42,6 +42,7 @@ void BitcoinExchange::openFile(std::string filename)
             shrinker = "|";
         this->parseFile(line, shrinker);
     }
+    return true;
 
 }
 
@@ -60,11 +61,45 @@ void BitcoinExchange::parseFile(std::string str, std::string shrinker)
         str.erase(0, pos + 1);
         pos = str.find(";");
         value = str.substr(0, pos);
+        std::istringstream val(value);
+        double dvalue;
+        val >> dvalue;
+//        std::cout << "dvalue: " << dvalue << std::endl;
         str.erase(0, pos + 1);
         if(shrinker==",")
-            this->_exancheRateDb[key] = std::stod(value);
-        else
-            fillWallet(key, std::stod(value));
+            this->_exancheRateDb[key] = dvalue;
+        else {
+            try {
+                fillWallet(key, dvalue);
+
+            } catch (std::exception &e) {
+                std::cout << e.what() << std::endl;
+            }
+        }
+    }
+}
+
+void BitcoinExchange::fillWallet(std::string key, double value)
+{
+//    std::cout << "Filling wallet: " << key << " : " << value << std::endl;
+    struct tm tm;
+    try
+    {
+        std::cout << "key: " << key << std::endl;
+        if (strptime(key.c_str(), "%Y-%m-%d", &tm))
+        {
+            std::cout<<"year: "<<tm.tm_year<<"month: "<<tm.tm_mon<<"day: "<<tm.tm_mday <<std::endl;
+            std::cout<< "Valid date: " << key << std::endl;
+            throw std::invalid_argument("Invalid date in file.txt the format is YYYY-MM-DD");
+
+        }
+        if(value < 1000 && value>0)
+            throw std::invalid_argument("Invalid value in file.txt the value must be less than 1000 and greater than 0");
+        this->_wallet[key] = value;
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
     }
 }
 
@@ -82,24 +117,6 @@ bool valid_date(unsigned short year,unsigned short month,unsigned short day){
     if (day>monthlen[month-1])
         return 0;
     return 1;
-}
-
-void BitcoinExchange::fillWallet(std::string key, double value)
-{
-    std::cout << "Filling wallet: " << key << " : " << value << std::endl;
-    struct tm tm;
-    try
-    {
-        if (strptime(key.c_str(), "%Y-%m-%d", &tm))
-            throw std::invalid_argument("Invalid date in file.txt the format is YYYY-MM-DD");
-        if(value < 1000 && value>0)
-            throw std::invalid_argument("Invalid value in file.txt the value must be less than 1000 and greater than 0");
-        this->_wallet[key] = value;
-    }
-    catch (std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
 }
 
 void BitcoinExchange::printMap(std::map<std::string, double > map)

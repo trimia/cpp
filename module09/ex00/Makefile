@@ -4,7 +4,7 @@ CXXFLAGS = #-Wall -Wextra -Werror -fsanitize=address
 
 CC = c++ 
 
-STD = -std=c++98
+#STD = -std=c++98
 
 SRC = main.cpp BitcoinExchange.cpp
 
