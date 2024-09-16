@@ -3,7 +3,7 @@
 
 int main()
 {
-    std::cout << std::endl << CYAN << "**** Sapn(5) ****  " << NONE << std::endl << std::endl;
+    std::cout << std::endl << CYAN << "**** Span(5) ****  " << NONE << std::endl << std::endl;
     Span sp = Span(5);
     std::cout << YELLOW << "sp.addNumber(5); " << NONE << std::endl;
     std::cout << YELLOW << "sp.addNumber(3); " << NONE << std::endl;
@@ -25,20 +25,20 @@ int main()
         std::cerr << e.what() << '\n';
     }
     std::cout << "Shortest Span -> " << sp.shortestSpan() << std::endl;
-    std::cout << "Longes Span   -> " << sp.longestSpan() << std::endl << std::endl;
+    std::cout << "Longest Span   -> " << sp.longestSpan() << std::endl << std::endl;
 
     std::cout << "-----------------------------------------------" << std::endl;
-    std::cout << std::endl << CYAN << "**** Sapn(10) ****  " << NONE << std::endl << std::endl;
+    std::cout << std::endl << CYAN << "**** Span(10) ****  " << NONE << std::endl << std::endl;
 
     Span sp1 = Span(10);
     sp1.addNumber(1, 9);
     std::cout << YELLOW << "sp1.addNumber(1, 9); " << NONE << std::endl << std::endl;
     std::cout << "Shortest Span -> " << sp1.shortestSpan() << std::endl;
-    std::cout << "Longes Span   -> " << sp1.longestSpan() << std::endl;
+    std::cout << "Longest Span   -> " << sp1.longestSpan() << std::endl;
 
     std::cout << "-----------------------------------------------" << std::endl;
     Span sp2 = Span(2);
-    std::cout << std::endl << CYAN << "**** Sapn(2) ****  " << NONE << std::endl << std::endl;
+    std::cout << std::endl << CYAN << "**** Span(2) ****  " << NONE << std::endl << std::endl;
     std::cout << YELLOW << " //" << NONE << std::endl << std::endl;
     try
     {
@@ -50,7 +50,7 @@ int main()
     }
     try
     {
-        std::cout << "Longes Span   -> " << sp2.longestSpan() << std::endl;
+        std::cout << "Longest Span   -> " << sp2.longestSpan() << std::endl;
     }
     catch(const std::exception& e)
     {

@@ -1,7 +1,7 @@
 
 #include "Easyfind.hpp"
 
-static  void	print(bool printMessage, std::string type)
+static  void	print(bool printMessage, const std::string& type)
 {
     if (printMessage)
         std::cout << "Element found in " << type << std::endl;

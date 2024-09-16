@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.25)
 project(cpp)
 
-set(CMAKE_CXX_STANDARD 98)
+#set(CMAKE_CXX_STANDARD 98)
 
 add_executable(megaphone module00/ex00/megaphone.cpp module00/ex01/Contact.cpp)
 add_executable(phonebook module00/ex01/PhoneBook.cpp module00/ex01/Contact.cpp module00/ex01/main.cpp)
