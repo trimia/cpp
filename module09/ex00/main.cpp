@@ -9,13 +9,11 @@ int main(int argc, char **argv)
         return 1;
     }
     std::string filename = argv[1];
-    std::cout<<filename<<std::endl;
-    // Parse parse;
-    // parse.parseFile(filename);
-    // parse.printMap();
     BitcoinExchange exchange;
     exchange.openFile(filename);
-//    exchange.printMap(exchange.get_exanche_rate_db());
-    exchange.printMap(exchange.get_wallet());
+//    exchange.printMap(exchange.get_exchange_rate_db());
+//    exchange.printWallet(exchange.get_wallet());
+    exchange.btc();
+
     return 0;
 }
