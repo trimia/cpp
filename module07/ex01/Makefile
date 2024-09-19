@@ -1,6 +1,6 @@
 NAME = iter 
 
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror
 
 CC = c++ 
 

@@ -1,8 +1,8 @@
 NAME = Array 
 
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CXXFLAGS = -Wall -Wextra -Werror
 
-CC = c++ 
+CC = g++
 
 STD = -std=c++98 
 

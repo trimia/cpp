@@ -21,7 +21,7 @@ int			main(void)
     {
         if (i == 0)
             std::cout << "value: [";
-        if (i >= 0 && i < (tab.size() - 1))
+        if ((i==0 || i > 0) && i < (tab.size() - 1))
             std::cout << tab[i] << ", ";
         else
             std::cout << tab[i] << "]" << std::endl;
@@ -47,7 +47,7 @@ int			main(void)
     {
         if (i == 0)
             std::cout << "value: [";
-        if (i >= 0 && i < (tab_char.size() - 1))
+        if ((i==0 || i > 0) && i < (tab_char.size() - 1))
             std::cout << tab_char[i] << ", ";
         else
             std::cout << tab_char[i] << "]" << std::endl;
@@ -78,7 +78,7 @@ int			main(void)
     {
         if (i == 0)
             std::cout << "value: [";
-        if (i >= 0 && i < (tab_char2.size() - 1))
+        if ((i==0 || i > 0) && i < (tab_char2.size() - 1))
             std::cout << tab_char2[i] << ", ";
         else
             std::cout << tab_char2[i] << "]" << std::endl;
@@ -92,7 +92,7 @@ int			main(void)
     {
         if (i == 0)
             std::cout << "value: [";
-        if (i >= 0 && i < (tab_char3.size() - 1))
+        if ((i==0 || i > 0) && i < (tab_char3.size() - 1))
             std::cout << tab_char3[i] << ", ";
         else
             std::cout << tab_char3[i] << "]" << std::endl;
