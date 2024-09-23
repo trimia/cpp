@@ -1,6 +1,6 @@
 NAME = mutated_abomination
 
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CXXFLAGS = -Wall -Wextra -Werror
 
 CC = c++ 
 

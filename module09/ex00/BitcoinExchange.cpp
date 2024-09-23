@@ -163,7 +163,7 @@ static std::pair<std::string, double> findNearestDate(const std::map<std::string
 void BitcoinExchange::btc()
 {
     for(std::multimap<std::string, double>::iterator it = _wallet.begin(); it != _wallet.end(); ++it)
-            std::cout<<it->first<<" => "<<it->second<<" = "<<it->second * findNearestDate(_exancheRateDb,it->first).second <<std::endl;
+            std::cout<<std::left<<std::setw(12)<<it->first<<" => "<<std::setw(4)<<it->second<<std::setw(4)<<" = "<<std::right<<std::setw(4)<<it->second * findNearestDate(_exancheRateDb,it->first).second <<std::endl;
 }
 
 

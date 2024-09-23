@@ -1,6 +1,6 @@
 NAME = easyfind
 
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CXXFLAGS = -Wall -Wextra -Werror
 
 CC = c++ 
 
