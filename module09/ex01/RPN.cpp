@@ -5,7 +5,7 @@ RPN::RPN() {
 
 RPN::~RPN() {
 }
-
+//think if would insert an enum to substitute the if else with switch case
 void RPN::calculate(std::string rpn) {
     std::istringstream isstr(rpn);
     std::string token;

@@ -32,5 +32,7 @@
 /nfs/homes/mmariani/Desktop/cpp/cmake-build-debug/CMakeFiles/span.dir
 /nfs/homes/mmariani/Desktop/cpp/cmake-build-debug/CMakeFiles/mutantstack.dir
 /nfs/homes/mmariani/Desktop/cpp/cmake-build-debug/CMakeFiles/btc.dir
+/nfs/homes/mmariani/Desktop/cpp/cmake-build-debug/CMakeFiles/RPN.dir
+/nfs/homes/mmariani/Desktop/cpp/cmake-build-debug/CMakeFiles/PmergeMe.dir
 /nfs/homes/mmariani/Desktop/cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
 /nfs/homes/mmariani/Desktop/cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir

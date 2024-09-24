@@ -37,5 +37,6 @@ add_executable(easyFind module08/ex00/main.cpp  module08/ex00/Easyfind.hpp)
 add_executable(span module08/ex01/main.cpp module08/ex01/Span.cpp module08/ex01/Span.hpp)
 add_executable(mutantstack module08/ex02/main.cpp module08/ex02/MutantStack.cpp module08/ex02/MutantStack.hpp)
 add_executable(btc module09/ex00/main.cpp module09/ex00/BitcoinExchange.cpp module09/ex00/BitcoinExchange.hpp module09/ex00/parse.cpp module09/ex00/parse.hpp)
-
+add_executable(RPN module09/ex01/main.cpp module09/ex01/RPN.cpp module09/ex01/RPN.hpp)
+add_executable(PmergeMe module09/ex02/main.cpp module09/ex02/PmergeMe.cpp module09/ex02/PmergeMe.hpp)
 
