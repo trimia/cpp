@@ -2,10 +2,10 @@
 
 PmergeMe::PmergeMe(int argc)
 {
+    _VecSize = argc - 1;
     _Vec.reserve(argc-1);
-    _pend.reserve(argc / 2);
-    _chain.reserve(_alphVecSize);
     _result.reserve(argc - 1);
+
     std::cout << "PmergeMe constructor " << std::endl;
 }
 
@@ -29,6 +29,7 @@ PmergeMe &PmergeMe::operator=(PmergeMe const &obj)
 void PmergeMe::fillVec(char ** argv,int argc)
 {
     int i = 1;
+    int vecSize;
     std::string token;
     while (i<argc)
     {
@@ -38,8 +39,22 @@ void PmergeMe::fillVec(char ** argv,int argc)
         }
         i++;
     }
-    std::cout << "_Vec" << std::endl;
-    printVec(_Vec);
+    if(((get_VecSize())/2)%2!=0)
+        vecSize=(get_VecSize())/2 +1;
+    else vecSize=(get_VecSize())/2;
+    for(int i = 0; i<get_VecSize(); i++)
+    {
+        if(i <vecSize)
+        {
+            _chain.push_back(_Vec[i]);
+        }else {
+            _pend.push_back(_Vec[i]);
+        }
+    }
+//    std::cout << "vec giro: "<<i <<" vec size "<<get_VecSize() << std::endl;
+//    printVec(_Vec,"Vec");
+//    printVec(_chain,"chain");
+//    printVec(_pend,"pend");
 }
 
 //void PmergeMe::merge(std::vector<int> A, int p, int q, int len)
@@ -92,11 +107,15 @@ void PmergeMe::sort(std::vector<int>first, int firstSize)
 {
     std::vector<int> vec;
     std::vector<int> pend;
+    vec.clear();
+    pend.clear();
     int i=0;
     int vecSize;
-    if(((firstSize-1)/2)%2!=0)
-        vecSize=(firstSize - 1)/2 +1;
-    else vecSize=(firstSize - 1)/2;
+
+    std::cout << "firstSize: "<<firstSize << std::endl;
+    if(((firstSize)/2)%2!=0)
+        vecSize=(firstSize)/2 +1;
+    else vecSize=(firstSize)/2;
     vec.reserve(vecSize);
     while (i<firstSize)
     {
@@ -108,29 +127,62 @@ void PmergeMe::sort(std::vector<int>first, int firstSize)
         }
         i++;
     }
-    printVec(vec);
-    if(vecSize==3) {
+    std::cout << "vec giro: "<<i <<" vec size "<<firstSize << std::endl;
+    if (vecSize == 4)
+    {
+        int temp1,temp2;
+        if(vec[0]>vec[1])
+            temp1=vec[0];
+        else temp1=vec[1];
+        if(vec[2]>vec[3])
+            temp2=vec[2];
+        else temp2=vec[3];
+        if(temp1>temp2){
+            _chain.push_back(temp1);
+            _chain.push_back(temp2);
+        }
+        else{
+            _chain.push_back(temp2);
+            _chain.push_back(temp1);
+        }
+        return;
+    }else
+    {
+        ;
+    }
+//    printVec(first);
+    if(vecSize==2) {
         std::cout << "vecsize =3" << std::endl;
+        std::cout << "vec[0] " << vec[0] << " vec[1] " << vec[1] << std::endl;
+        std::cout << "pend[0] " << pend[0] << std::endl;
         if (pend[0] > vec[0] && pend[0] > vec[1]) {
             _chain.push_back(pend[0]);
         } else {
             if (vec[0] > vec[1]) {
                 _chain.push_back(vec[0]);
-                _chain.push_back(vec[1]);
+                if(pend[0]>vec[1])
+                    _chain.push_back(pend[0]);
+                else
+                    _chain.push_back(vec[1]);
             } else {
                 _chain.push_back(vec[1]);
-                _chain.push_back(vec[0]);
+                if(pend[0]>vec[0])
+                    _chain.push_back(pend[0]);
+                else{
+                    _chain.push_back(vec[0]);
+                    _chain.push_back(pend[0]);
+                }
             }
         }
-
+        return;
     }else sort(vec,vecSize);
 }
 
 
 
-void PmergeMe::printVec(std::vector<int> vec)
+void PmergeMe::printVec(std::vector<int> vec, std::string name)
 {
-    std::cout << "printVec" << std::endl;
+    std::cout << "printVec :"  <<name<< std::endl;
     for (auto &i : vec)
     {
         std::cout << i << " ";
@@ -140,7 +192,7 @@ void PmergeMe::printVec(std::vector<int> vec)
 
 int PmergeMe::get_VecSize() const
 {
-    return _alphVecSize;
+    return _VecSize;
 }
 
 std::vector<int> PmergeMe::get_Vec() const

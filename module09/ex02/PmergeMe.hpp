@@ -13,11 +13,11 @@
 class PmergeMe
 {
 private:
-    std::vector<int> _Vec;
-    std::vector<int> _chain;
-    std::vector<int> _pend;
-    std::vector<int> _result;
-    int _alphVecSize;
+    std::vector<int>    _Vec;
+    std::vector<int>    _chain;
+    std::vector<int>    _pend;
+    std::vector<int>    _result;
+    int                 _VecSize;
 
 
 public:
@@ -25,7 +25,7 @@ public:
     ~PmergeMe();
     PmergeMe &operator=(PmergeMe const &obj);
     void merge_insertion_sort_impl(std::string argv);
-    void printVec(std::vector<int> vec);
+    void printVec(std::vector<int> vec,std::string str);
     void fillVec(char ** argv,int argc);
     void merge_insertion_sort();
     void sort(std::vector<int> A, int p, int len);
