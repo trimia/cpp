@@ -14,10 +14,12 @@ class PmergeMe
 {
 private:
     std::vector<int>    _Vec;
+    std::vector<int>    _firstChain;
     std::vector<int>    _chain;
     std::vector<int>    _pend;
     std::vector<int>    _result;
     int                 _VecSize;
+    int                 _chainFinalSize;
 
 
 public:
