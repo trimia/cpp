@@ -31,7 +31,6 @@ public:
     void fillVec(char ** argv,int argc);
     void merge_insertion_sort();
     void sort(std::vector<int> A, int p, int len);
-    void merge(std::vector<int> A, int p, int q, int len);
 
 
     int get_VecSize() const;
@@ -46,6 +45,12 @@ public:
 
 
     void sort(std::vector<int> first, int firstSize);
+
+    void mergeInsertion(int l, int r, int threshold);
+
+    void merge(int l, int m, int r);
+
+    void insertionSort(int l, int r);
 };
 
 #endif

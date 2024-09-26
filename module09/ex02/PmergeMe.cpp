@@ -61,6 +61,71 @@ void PmergeMe::fillVec(char ** argv,int argc)
 //    printVec(_pend,"pend");
 }
 
+
+
+void PmergeMe::insertionSort( int l, int r)
+{
+    for (int i = l; i <= r; i++)
+    {
+        int tmp = _Vec[i];
+        int j = i;
+        while ((j > l) && (_Vec[j - 1] > tmp))
+        {
+            _Vec[j] = _Vec[j - 1];
+            j--;
+        }
+        _Vec[j] = tmp;
+    }
+}
+
+void PmergeMe::merge(int l, int m, int r)
+{
+    int i = l;
+    int j = m + 1;
+    int k = l;
+    while ((i <= m) && (j <= r))
+    {
+        if (_Vec[i] < _Vec[j])
+        {
+            _result[k] = _Vec[i];
+            i++;
+        }
+        else
+        {
+            _result[k] = _Vec[j];
+            j++;
+        }
+        k++;
+    }
+
+    for (; j <= r; j++, k++)
+        _result[k] = _Vec[j];
+
+    for (; i <= m; i++, k++)
+        _result[k] = _Vec[i];
+
+    for (i = l; i <= r; i++)
+        _Vec[i] = _result[i];
+}
+
+void PmergeMe::mergeInsertion(int l, int r, int threshold)
+{
+    if (l < r)
+    {
+        if ((r - l) <= threshold)
+            insertionSort(l, r);
+        else
+        {
+            int m = (l + r) / 2;
+            mergeInsertion(l, m, threshold);
+            mergeInsertion(m + 1, r, threshold);
+            merge(l, m, r);
+        }
+    }
+}
+
+
+
 //void PmergeMe::merge(std::vector<int> A, int p, int q, int len)
 //{
 //    int n1 = q - p + 1;
@@ -107,108 +172,144 @@ void PmergeMe::fillVec(char ** argv,int argc)
 //    printVec(A);
 //}
 
-void PmergeMe::sort(std::vector<int>first, int firstSize)
-{
+void PmergeMe::sort(std::vector<int> first, int firstSize) {
     std::vector<int> vec;
     std::vector<int> pend;
-    vec.clear();
-    pend.clear();
-    int i=0;
-    int vecSize;
+    int vecSize = (firstSize + 1) / 2;
 
-    std::cout << "firstSize: "<<firstSize << std::endl;
-    if(((firstSize)/2)%2!=0)
-        vecSize=(firstSize)/2 +1;
-    else vecSize=(firstSize)/2;
     vec.reserve(vecSize);
-    while (i<firstSize)
-    {
-        if(i <vecSize)
-        {
+    pend.reserve(firstSize - vecSize);
+
+    for (int i = 0; i < firstSize; ++i) {
+        if (i < vecSize) {
             vec.push_back(first[i]);
-        }else {
+        } else {
             pend.push_back(first[i]);
         }
-        i++;
     }
-    printVec(vec,"vec");
-    printVec(pend,"pend");
-    std::cout << "chain size "<<_chain.size() <<" _chain final  size "<<_chainFinalSize << std::endl;
-    if(_chain.size()==(size_t)_chainFinalSize)
-    {
-        std::cout <<GREEN<< "chain size == chainFinalSize"<<_chainFinalSize << NONE<<std::endl;
+
+    printVec(vec, "vec");
+    printVec(pend, "pend");
+
+    std::cout << "chain size " << _chain.size() << " _chain final size " << _chainFinalSize << std::endl;
+    if (_chain.size() == (size_t)_chainFinalSize) {
+        std::cout << GREEN << "chain size == chainFinalSize" << _chainFinalSize << NONE << std::endl;
         return;
     }
-    if (vecSize == 4)
-    {
 
-        int temp1,temp2;
-        if(vec[0]>vec[1])
-            temp1=vec[0];
-        else temp1=vec[1];
-        if(vec[2]>vec[3])
-            temp2=vec[2];
-        else temp2=vec[3];
-        if(temp1>temp2){
+    if (vecSize == 4) {
+        int temp1 = std::max(vec[0], vec[1]);
+        int temp2 = std::max(vec[2], vec[3]);
+
+        if (temp1 > temp2) {
             _chain.push_back(temp1);
             _chain.push_back(temp2);
-        }
-        else{
+        } else {
             _chain.push_back(temp2);
             _chain.push_back(temp1);
         }
-        printVec(_firstChain,"firstChain");
+
+        printVec(_firstChain, "firstChain");
         _firstChain.clear();
-        _firstChain.reserve(vecSize-2);
-        printVec(_firstChain,"firstChain");
-        printVec(vec,"vec");
-//        for(int i =0; (size_t)i<_chain.size(); i++)
-//        {
-            int n=0;
-            int flag=0;
-            while (n<vecSize) {
-                for (int i = 0; (size_t) i < _chain.size(); i++) {
-                    if (vec[n] == _chain[i])
-                        flag=1;
-                }
-                if(flag==0)
-                {
-                    std::cout << "vec[n] " << vec[n] << " _chain[i] " << _chain[i] << std::endl;
-                    _firstChain.push_back(vec[n]);
-                }
-                n++;
+        _firstChain.reserve(vecSize - 2);
 
-//                if (vec[n] != _chain[i])
-//                {
-//                    std::cout << "vec[n] "<<vec[n] << " _chain[i] "<<_chain[i] << std::endl;
-//                    _firstChain.push_back(vec[n]);
-//                }
-//                n++;
-//            }
+        int n = 0;
+        while (n < vecSize) {
+            bool found = false;
+            for (size_t i = 0; i < _chain.size(); ++i) {
+                if (vec[n] == _chain[i]) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                _firstChain.push_back(vec[n]);
+            }
+            ++n;
         }
-        printVec(_chain,"chain");
-        printVec(_firstChain,"firstChain");
-        sort(_firstChain,_firstChain.size());
 
-
-//        return;
+        printVec(_chain, "chain");
+        printVec(_firstChain, "firstChain");
+        sort(_firstChain, _firstChain.size());
+        return;
     }
-    sort(vec,vecSize);
-//    else
-//    {
-//        std::cout<<YELLOW << "vecsize  = "<<vecSize << NONE<<std::endl;
-//        _firstChain.clear();
-//        _firstChain.reserve(vecSize-2);
-//        for (int i =0; i < vecSize-2; i++)
-//        {
-//            for(int n =0; (size_t)n<_chain.size(); n++) {
-//                if (vec[i] != _chain[n])
-//                    _firstChain.push_back(vec[i]);
-//            }
-//        }
 
-//        sort(_firstChain,_firstChain.size());
+    if (vecSize > 1) {
+        sort(vec, vecSize);
+    }
+}
+
+//void PmergeMe::sort(std::vector<int>first, int firstSize) {
+//    std::vector<int> vec;
+//    std::vector<int> pend;
+//    vec.clear();
+//    pend.clear();
+//    int i = 0;
+//    int vecSize;
+//
+//    std::cout << "firstSize: " << firstSize << std::endl;
+//    if (((firstSize) / 2) % 2 != 0)
+//        vecSize = (firstSize) / 2 + 1;
+//    else vecSize = (firstSize) / 2;
+//    vec.reserve(vecSize);
+//    while (i < firstSize) {
+//        if (i < vecSize) {
+//            vec.push_back(first[i]);
+//        } else {
+//            pend.push_back(first[i]);
+//        }
+//        i++;
 //    }
+//    printVec(vec, "vec");
+//    printVec(pend, "pend");
+//    std::cout << "chain size " << _chain.size() << " _chain final  size " << _chainFinalSize << std::endl;
+//    if (_chain.size() == (size_t) _chainFinalSize) {
+//        std::cout << GREEN << "chain size == chainFinalSize" << _chainFinalSize << NONE << std::endl;
+//        return;
+//    }
+//    if (vecSize == 4) {
+//        int temp1, temp2;
+//        if (vec[0] > vec[1])
+//            temp1 = vec[0];
+//        else temp1 = vec[1];
+//        if (vec[2] > vec[3])
+//            temp2 = vec[2];
+//        else temp2 = vec[3];
+//        if (temp1 > temp2) {
+//            _chain.push_back(temp1);
+//            _chain.push_back(temp2);
+//        } else {
+//            _chain.push_back(temp2);
+//            _chain.push_back(temp1);
+//        }
+//        printVec(_firstChain, "firstChain");
+//        _firstChain.clear();
+//        _firstChain.reserve(vecSize - 2);
+//        printVec(_firstChain, "firstChain");
+//        printVec(vec, "vec");
+//        int n = 0;
+//        int flag = 0;
+//        std::cout << "vecSize " << vecSize << std::endl;
+//        std::cout << "chain size " << _chain.size() << std::endl;
+//        while (n < vecSize) {
+//            for (int i = 0; (size_t) i < _chain.size(); i++) {
+//                if (vec[n] == _chain[i])
+//                    flag = 1;
+//            }
+//            if (flag == 0) {
+//                std::cout << "vec[n] " << vec[n] << " _chain[i] " << _chain[i] << std::endl;
+//                _firstChain.push_back(vec[n]);
+//            }
+//            n++;
+//        }
+//        printVec(_chain, "chain");
+//        printVec(_firstChain, "firstChain");
+//        sort(_firstChain, _firstChain.size());
+//
+//        return;
+//    }
+//    sort(vec, vecSize);
+//}
 
 ////    printVec(first);
 //    if(vecSize==2) {
@@ -236,7 +337,7 @@ void PmergeMe::sort(std::vector<int>first, int firstSize)
 //        }
 //        return;
 //    }else sort(vec,vecSize);
-}
+//}
 
 
 
