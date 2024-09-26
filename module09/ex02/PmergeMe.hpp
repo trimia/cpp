@@ -46,7 +46,7 @@ public:
 
     void sort(std::vector<int> first, int firstSize);
 
-    void mergeInsertion(int l, int r, int threshold);
+    void mergeInsertion(int l, int r);
 
     void merge(int l, int m, int r);
 

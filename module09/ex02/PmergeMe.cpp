@@ -65,6 +65,7 @@ void PmergeMe::fillVec(char ** argv,int argc)
 
 void PmergeMe::insertionSort( int l, int r)
 {
+    std::cout<<GREEN << "insertionSort" <<NONE << std::endl;
     for (int i = l; i <= r; i++)
     {
         int tmp = _Vec[i];
@@ -80,6 +81,7 @@ void PmergeMe::insertionSort( int l, int r)
 
 void PmergeMe::merge(int l, int m, int r)
 {
+    std::cout<<YELLOW << "merge" <<NONE << std::endl;
     int i = l;
     int j = m + 1;
     int k = l;
@@ -108,21 +110,35 @@ void PmergeMe::merge(int l, int m, int r)
         _Vec[i] = _result[i];
 }
 
-void PmergeMe::mergeInsertion(int l, int r, int threshold)
+void PmergeMe::mergeInsertion(int l, int r)
 {
+    std::cout<<YELLOW << "mergeInsertion" <<NONE << std::endl;
     if (l < r)
     {
-        if ((r - l) <= threshold)
+        if ((r - l) <= _chainFinalSize)
             insertionSort(l, r);
         else
         {
             int m = (l + r) / 2;
-            mergeInsertion(l, m, threshold);
-            mergeInsertion(m + 1, r, threshold);
+            mergeInsertion(l, m);
+            mergeInsertion(m + 1, r);
             merge(l, m, r);
         }
     }
 }
+//    if (l < r)
+//    {
+//        if ((r - l) <= threshold)
+//            insertionSort(l, r);
+//        else
+//        {
+//            int m = (l + r) / 2;
+//            mergeInsertion(l, m);
+//            mergeInsertion(m + 1, r);
+//            merge(l, m, r);
+//        }
+//    }
+//}
 
 
 
