@@ -44,6 +44,8 @@ void PmergeMe::fillContainer(Container& container, char** argv, int argc)
     while (i < argc && container.size() < (size_t)(argc - 1)) {
         token = argv[i];
         container.push_back(toInt(token));
+        if(toInt(token)<0)
+            throw std::invalid_argument("only positive numbers are allowed");
         i++;
     }
 }

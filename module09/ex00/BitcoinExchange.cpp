@@ -35,12 +35,13 @@ bool BitcoinExchange::openFile(std::string filename)
     std::string line;
     while (std::getline(file, line))
     {
-        if(filename.find("csv") != std::string::npos)
+
+        if(line.find("date") != std::string::npos)
+            continue;
+        if(line.find(",") != std::string::npos)
             shrinker = ",";
         else
             shrinker = "|";
-        if(line.find("date") != std::string::npos)
-            continue;
         try {
             parseFile(line, shrinker);
         } catch (std::exception &e) {

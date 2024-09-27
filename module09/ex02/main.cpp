@@ -13,7 +13,7 @@ int main(int argc, char **argv)
     try{
         pmergeMe.merge_insertion_sort_impl(argc,argv);
     }catch(std::exception &e){
-        std::cerr << "it accept only a sequence of integer" << std::endl;
+        std::cerr << "Error: " << e.what() << std::endl;
     }
 //    pmergeMe.merge_insertion_sort_impl(argc,argv);
     return 0;
