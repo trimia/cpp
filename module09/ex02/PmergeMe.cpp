@@ -3,11 +3,8 @@
 PmergeMe::PmergeMe(int argc)
 {
     _VecSize = argc - 1;
+    _dequeSize = argc - 1;
     _Vec.reserve(argc-1);
-    _result.reserve(argc - 1);
-    if(((_VecSize)/2)%2!=0)
-        _chainFinalSize=(_VecSize)/2 +1;
-    else _chainFinalSize=(_VecSize)/2;
 
     std::cout << "PmergeMe constructor " << std::endl;
 }
@@ -22,349 +19,119 @@ PmergeMe &PmergeMe::operator=(PmergeMe const &obj)
     if (this != &obj)
     {
         _Vec = obj._Vec;
-        _chain = obj._chain;
-        _pend = obj._pend;
-        _result = obj._result;
+        _VecSize = obj._VecSize;
+
     }
     return *this;
 }
 
-void PmergeMe::fillVec(char ** argv,int argc)
+int toInt(std::string str)
+{
+    int number=0;
+    char *p=NULL;
+    number=(int)std::strtol(str.c_str(), &p, 10);
+    if(*p!='\0')
+        throw std::invalid_argument("toInt: invalid number");
+    return number;
+}
+
+template <typename Container>
+void PmergeMe::fillContainer(Container& container, char** argv, int argc)
 {
     int i = 1;
-    int vecSize;
     std::string token;
-    while (i<argc)
-    {
-        if(_Vec.size() <(size_t)get_VecSize()) {
-            token = argv[i];
-            _Vec.push_back(std::stoi(token));
-        }
+
+    while (i < argc && container.size() < (size_t)(argc - 1)) {
+        token = argv[i];
+        container.push_back(toInt(token));
         i++;
     }
-    if(((_VecSize)/2)%2!=0)
-        vecSize=(_VecSize)/2 +1;
-    else vecSize=(_VecSize)/2;
-    _firstChain.reserve(vecSize);
-    for(int i = 0; i<_VecSize; i++)
-    {
-        if(i <vecSize)
-        {
-            _firstChain.push_back(_Vec[i]);
-        }else {
-            _pend.push_back(_Vec[i]);
-        }
-    }
-//    std::cout << "vec giro: "<<i <<" vec size "<<get_VecSize() << std::endl;
-//    printVec(_Vec,"Vec");
-//    printVec(_chain,"chain");
-//    printVec(_pend,"pend");
 }
 
-
-
-void PmergeMe::insertionSort( int l, int r)
-{
-    std::cout<<GREEN << "insertionSort" <<NONE << std::endl;
-    for (int i = l; i <= r; i++)
-    {
-        int tmp = _Vec[i];
-        int j = i;
-        while ((j > l) && (_Vec[j - 1] > tmp))
-        {
-            _Vec[j] = _Vec[j - 1];
-            j--;
-        }
-        _Vec[j] = tmp;
-    }
-}
-
-void PmergeMe::merge(int l, int m, int r)
-{
-    std::cout<<YELLOW << "merge" <<NONE << std::endl;
-    int i = l;
-    int j = m + 1;
-    int k = l;
-    while ((i <= m) && (j <= r))
-    {
-        if (_Vec[i] < _Vec[j])
-        {
-            _result[k] = _Vec[i];
-            i++;
-        }
-        else
-        {
-            _result[k] = _Vec[j];
-            j++;
-        }
-        k++;
-    }
-
-    for (; j <= r; j++, k++)
-        _result[k] = _Vec[j];
-
-    for (; i <= m; i++, k++)
-        _result[k] = _Vec[i];
-
-    for (i = l; i <= r; i++)
-        _Vec[i] = _result[i];
-}
-
-void PmergeMe::mergeInsertion(int l, int r)
-{
-    std::cout<<YELLOW << "mergeInsertion" <<NONE << std::endl;
-    if (l < r)
-    {
-        if ((r - l) <= _chainFinalSize)
-            insertionSort(l, r);
-        else
-        {
-            int m = (l + r) / 2;
-            mergeInsertion(l, m);
-            mergeInsertion(m + 1, r);
-            merge(l, m, r);
-        }
-    }
-}
-//    if (l < r)
-//    {
-//        if ((r - l) <= threshold)
-//            insertionSort(l, r);
-//        else
-//        {
-//            int m = (l + r) / 2;
-//            mergeInsertion(l, m);
-//            mergeInsertion(m + 1, r);
-//            merge(l, m, r);
-//        }
-//    }
-//}
-
-
-
-//void PmergeMe::merge(std::vector<int> A, int p, int q, int len)
-//{
-//    int n1 = q - p + 1;
-//    int n2 = len - q;
-//    std::vector<int> L;
-//    std::vector<int> R;
-//    for (int i = 0; i < n1; i++)
-//    {
-//        L.push_back(A[p + i]);
-//    }
-//    for (int j = 0; j < n2; j++)
-//    {
-//        R.push_back(A[q + j + 1]);
-//    }
-//    int i = 0;
-//    int j = 0;
-//    int k = p;
-//    while (i < n1 && j < n2)
-//    {
-//        if (L[i] <= R[j])
-//        {
-//            A[k] = L[i];
-//            i++;
-//        }
-//        else
-//        {
-//            A[k] = R[j];
-//            j++;
-//        }
-//        k++;
-//    }
-//    while (i < n1)
-//    {
-//        A[k] = L[i];
-//        i++;
-//        k++;
-//    }
-//    while (j < n2)
-//    {
-//        A[k] = R[j];
-//        j++;
-//        k++;
-//    }
-//    printVec(A);
-//}
-
-void PmergeMe::sort(std::vector<int> first, int firstSize) {
-    std::vector<int> vec;
-    std::vector<int> pend;
-    int vecSize = (firstSize + 1) / 2;
-
-    vec.reserve(vecSize);
-    pend.reserve(firstSize - vecSize);
-
-    for (int i = 0; i < firstSize; ++i) {
-        if (i < vecSize) {
-            vec.push_back(first[i]);
+// Function to perform binary search insertion
+template <typename Container>
+void PmergeMe::binarySearchInsert(Container& container, typename Container::value_type value) {
+    auto start = container.begin();
+    auto end = container.end();
+    while (start < end) {
+        auto mid = start + std::distance(start, end) / 2;
+        if (*mid < value) {
+            start = mid + 1;
         } else {
-            pend.push_back(first[i]);
+            end = mid;
         }
     }
+    container.insert(start, value);
+}
 
-    printVec(vec, "vec");
-    printVec(pend, "pend");
+// Function to merge two halves using binary search insertion
+template <typename Container>
+void PmergeMe::merge(Container& container, int left, int mid, int right) {
 
-    std::cout << "chain size " << _chain.size() << " _chain final size " << _chainFinalSize << std::endl;
-    if (_chain.size() == (size_t)_chainFinalSize) {
-        std::cout << GREEN << "chain size == chainFinalSize" << _chainFinalSize << NONE << std::endl;
-        return;
+    Container leftArr(container.begin() + left, container.begin() + mid + 1);
+    Container rightArr(container.begin() + mid + 1, container.begin() + right + 1);
+
+    for (const auto& value : rightArr) {
+        binarySearchInsert(leftArr, value);
     }
 
-    if (vecSize == 4) {
-        int temp1 = std::max(vec[0], vec[1]);
-        int temp2 = std::max(vec[2], vec[3]);
+    // Copy the sorted elements back to the original container
+    std::copy(leftArr.begin(), leftArr.end(), container.begin() + left);
+}
 
-        if (temp1 > temp2) {
-            _chain.push_back(temp1);
-            _chain.push_back(temp2);
-        } else {
-            _chain.push_back(temp2);
-            _chain.push_back(temp1);
-        }
+// Function to implement merge sort with binary search insertion
+template <typename Container>
+void PmergeMe::mergeSort(Container& container, int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
 
-        printVec(_firstChain, "firstChain");
-        _firstChain.clear();
-        _firstChain.reserve(vecSize - 2);
+        // Recursively sort the first half
+        mergeSort(container, left, mid);
 
-        int n = 0;
-        while (n < vecSize) {
-            bool found = false;
-            for (size_t i = 0; i < _chain.size(); ++i) {
-                if (vec[n] == _chain[i]) {
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                _firstChain.push_back(vec[n]);
-            }
-            ++n;
-        }
+        // Recursively sort the second half
+        mergeSort(container, mid + 1, right);
 
-        printVec(_chain, "chain");
-        printVec(_firstChain, "firstChain");
-        sort(_firstChain, _firstChain.size());
-        return;
-    }
-
-    if (vecSize > 1) {
-        sort(vec, vecSize);
+        // Merge the two halves using binary search insertion
+        merge(container, left, mid, right);
     }
 }
 
-//void PmergeMe::sort(std::vector<int>first, int firstSize) {
-//    std::vector<int> vec;
-//    std::vector<int> pend;
-//    vec.clear();
-//    pend.clear();
-//    int i = 0;
-//    int vecSize;
-//
-//    std::cout << "firstSize: " << firstSize << std::endl;
-//    if (((firstSize) / 2) % 2 != 0)
-//        vecSize = (firstSize) / 2 + 1;
-//    else vecSize = (firstSize) / 2;
-//    vec.reserve(vecSize);
-//    while (i < firstSize) {
-//        if (i < vecSize) {
-//            vec.push_back(first[i]);
-//        } else {
-//            pend.push_back(first[i]);
-//        }
-//        i++;
-//    }
-//    printVec(vec, "vec");
-//    printVec(pend, "pend");
-//    std::cout << "chain size " << _chain.size() << " _chain final  size " << _chainFinalSize << std::endl;
-//    if (_chain.size() == (size_t) _chainFinalSize) {
-//        std::cout << GREEN << "chain size == chainFinalSize" << _chainFinalSize << NONE << std::endl;
-//        return;
-//    }
-//    if (vecSize == 4) {
-//        int temp1, temp2;
-//        if (vec[0] > vec[1])
-//            temp1 = vec[0];
-//        else temp1 = vec[1];
-//        if (vec[2] > vec[3])
-//            temp2 = vec[2];
-//        else temp2 = vec[3];
-//        if (temp1 > temp2) {
-//            _chain.push_back(temp1);
-//            _chain.push_back(temp2);
-//        } else {
-//            _chain.push_back(temp2);
-//            _chain.push_back(temp1);
-//        }
-//        printVec(_firstChain, "firstChain");
-//        _firstChain.clear();
-//        _firstChain.reserve(vecSize - 2);
-//        printVec(_firstChain, "firstChain");
-//        printVec(vec, "vec");
-//        int n = 0;
-//        int flag = 0;
-//        std::cout << "vecSize " << vecSize << std::endl;
-//        std::cout << "chain size " << _chain.size() << std::endl;
-//        while (n < vecSize) {
-//            for (int i = 0; (size_t) i < _chain.size(); i++) {
-//                if (vec[n] == _chain[i])
-//                    flag = 1;
-//            }
-//            if (flag == 0) {
-//                std::cout << "vec[n] " << vec[n] << " _chain[i] " << _chain[i] << std::endl;
-//                _firstChain.push_back(vec[n]);
-//            }
-//            n++;
-//        }
-//        printVec(_chain, "chain");
-//        printVec(_firstChain, "firstChain");
-//        sort(_firstChain, _firstChain.size());
-//
-//        return;
-//    }
-//    sort(vec, vecSize);
-//}
-
-////    printVec(first);
-//    if(vecSize==2) {
-//        std::cout << "vecsize =3" << std::endl;
-//        std::cout << "vec[0] " << vec[0] << " vec[1] " << vec[1] << std::endl;
-//        std::cout << "pend[0] " << pend[0] << std::endl;
-//        if (pend[0] > vec[0] && pend[0] > vec[1]) {
-//            _chain.push_back(pend[0]);
-//        } else {
-//            if (vec[0] > vec[1]) {
-//                _chain.push_back(vec[0]);
-//                if(pend[0]>vec[1])
-//                    _chain.push_back(pend[0]);
-//                else
-//                    _chain.push_back(vec[1]);
-//            } else {
-//                _chain.push_back(vec[1]);
-//                if(pend[0]>vec[0])
-//                    _chain.push_back(pend[0]);
-//                else{
-//                    _chain.push_back(vec[0]);
-//                    _chain.push_back(pend[0]);
-//                }
-//            }
-//        }
-//        return;
-//    }else sort(vec,vecSize);
-//}
-
-
-
-void PmergeMe::printVec(std::vector<int> vec, std::string name)
-{
-    std::cout<<MAGENTA << "printVec :"  <<name<< std::endl;
-    for (auto &i : vec)
-    {
-        std::cout << i << " ";
+template <typename Container>
+void PmergeMe::printContainer(const Container& container, const std::string& name) {
+    std::cout << name<<": ";
+    for (const auto& element : container) {
+        std::cout <<element << " ";
     }
-    std::cout<<NONE << std::endl;
+    std::cout << std::endl;
+}
+
+template <typename Container>
+void PmergeMe::printinfo(Container &container,char ** before,int size,std::chrono::duration<double> time,std::string type)
+{
+    std::cout << "Before: ";
+    for(int i = 1; i < size; i++)
+        std::cout<<before[i]<<" ";
+    std::cout<<std::endl;
+    printContainer(container,"After: ");
+    std::cout << "Time: to process a range of "<<size<<" elements with "<<type<<" " << time.count()*1000000 << " micro seconds" << std::endl;
+    std::cout << std::endl;
+}
+
+void PmergeMe::merge_insertion_sort_impl(int argc, char **argv)
+{
+    fillContainer(_Vec, argv, argc);
+    auto start = std::chrono::high_resolution_clock::now();
+    mergeSort(_Vec, 0, get_VecSize() - 1);
+    auto end = std::chrono::high_resolution_clock::now();
+    _vecTime = end - start;
+    printinfo(_Vec,argv,argc,_vecTime,"vector");
+
+    fillContainer(_deque, argv, argc);
+    start = std::chrono::high_resolution_clock::now();
+    mergeSort(_deque, 0,  get_dequeSize()- 1);
+    end = std::chrono::high_resolution_clock::now();
+    _dequeTime = end - start;
+    printinfo(_deque,argv,argc,_dequeTime,"forward list");
 }
 
 int PmergeMe::get_VecSize() const
@@ -372,52 +139,9 @@ int PmergeMe::get_VecSize() const
     return _VecSize;
 }
 
-std::vector<int> PmergeMe::get_Vec() const
+int PmergeMe::get_dequeSize() const
 {
-    return _Vec;
+    return _dequeSize;
 }
 
-void PmergeMe::set_Vec(const std::vector<int> &alphVec)
-{
-    _Vec = alphVec;
-}
-
-std::vector<int> PmergeMe::get_chain() const
-{
-    return _chain;
-}
-
-void PmergeMe::set_chain(const std::vector<int> &chain)
-{
-    _chain = chain;
-}
-
-std::vector<int> PmergeMe::get_pend() const
-{
-    return _pend;
-}
-
-void PmergeMe::set_pend(const std::vector<int> &pend)
-{
-    _pend = pend;
-}
-
-std::vector<int> PmergeMe::get_result() const
-{
-    return _result;
-}
-
-void PmergeMe::set_result(const std::vector<int> &result)
-{
-    _result = result;
-}
-
-
-//void PmergeMe::merge_insertion_sort_impl(std::string argv)
-//{
-//    std::vector<int> vec;
-//    fillVec(argv,argc);
-//    merge_insertion_sort();
-//    printVec(_result);
-//}
 

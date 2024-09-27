@@ -5,7 +5,16 @@ RPN::RPN() {
 
 RPN::~RPN() {
 }
-//think if would insert an enum to substitute the if else with switch case
+int toInt(std::string str)
+{
+    int number=0;
+    char *p=NULL;
+    number=(int)std::strtol(str.c_str(), &p, 10);
+    if(*p!='\0')
+        throw std::invalid_argument("toInt: invalid number");
+    return number;
+}
+
 void RPN::calculate(std::string rpn) {
     std::istringstream isstr(rpn);
     std::string token;
@@ -33,7 +42,7 @@ void RPN::calculate(std::string rpn) {
                 _rpn.push_back(b / a);
             }
         } else {
-            _rpn.push_back(std::stoi(token));
+            _rpn.push_back(toInt(token));
         }
     }
     printResult();

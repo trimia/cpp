@@ -10,47 +10,46 @@
 #include <iterator>
 #include <type_traits>
 #include <vector>
+#include <chrono>
+#include <valarray>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <deque>
 class PmergeMe
 {
 private:
-    std::vector<int>    _Vec;
-    std::vector<int>    _firstChain;
-    std::vector<int>    _chain;
-    std::vector<int>    _pend;
-    std::vector<int>    _result;
-    int                 _VecSize;
-    int                 _chainFinalSize;
-
+    std::vector<int>        _Vec;
+    int                     _VecSize;
+    int                     _dequeSize;
+    std::deque<int>          _deque;
+    std::chrono::duration<double> _vecTime;
+    std::chrono::duration<double> _dequeTime;
 
 public:
     PmergeMe(int argc);
     ~PmergeMe();
     PmergeMe &operator=(PmergeMe const &obj);
     void merge_insertion_sort_impl(std::string argv);
-    void printVec(std::vector<int> vec,std::string str);
     void fillVec(char ** argv,int argc);
     void merge_insertion_sort();
-    void sort(std::vector<int> A, int p, int len);
-
 
     int get_VecSize() const;
-    std::vector<int> get_Vec() const;
-    void set_Vec(const std::vector<int> &alphVec);
-    std::vector<int> get_chain() const;
-    void set_chain(const std::vector<int> &chain);
-    std::vector<int> get_pend() const;
-    void set_pend(const std::vector<int> &pend);
-    std::vector<int> get_result() const;
-    void set_result(const std::vector<int> &result);
+    int get_dequeSize() const;
 
-
-    void sort(std::vector<int> first, int firstSize);
-
-    void mergeInsertion(int l, int r);
-
-    void merge(int l, int m, int r);
-
-    void insertionSort(int l, int r);
+    template<typename Container>
+    void binarySearchInsert(Container &container,typename Container::value_type value);
+    template<typename Container>
+    void merge(Container &container, int left, int mid, int right);
+    template<typename Container>
+    void mergeSort(Container &container, int left, int right);
+    template<typename Container>
+    void fillContainer(Container &container, char **argv, int argc);
+    template<typename Container>
+    void printContainer(const Container &container, const std::string &name);
+    void merge_insertion_sort_impl(int argc, char **argv);
+    template<typename Container>
+    void printinfo(Container &container, char **before,int size, std::chrono::duration<double> time, std::string type);
 };
 
 #endif
