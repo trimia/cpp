@@ -9,7 +9,7 @@ int toInt(std::string str)
 {
     int number=0;
     char *p=NULL;
-    number=(int)std::strtol(str.c_str(), &p, 10);
+    number=(int) strtol(str.c_str(), &p, 10);
     if(*p!='\0')
         throw std::invalid_argument("toInt: invalid number");
     return number;

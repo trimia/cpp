@@ -6,12 +6,10 @@ PmergeMe::PmergeMe(int argc)
     _dequeSize = argc - 1;
     _Vec.reserve(argc-1);
 
-    std::cout << "PmergeMe constructor " << std::endl;
 }
 
 PmergeMe::~PmergeMe()
 {
-    std::cout << "PmergeMe destructor " << std::endl;
 }
 
 PmergeMe &PmergeMe::operator=(PmergeMe const &obj)
@@ -53,10 +51,10 @@ void PmergeMe::fillContainer(Container& container, char** argv, int argc)
 // Function to perform binary search insertion
 template <typename Container>
 void PmergeMe::binarySearchInsert(Container& container, typename Container::value_type value) {
-    auto start = container.begin();
-    auto end = container.end();
+    typename Container::iterator start = container.begin();
+    typename Container::iterator end = container.end();
     while (start < end) {
-        auto mid = start + std::distance(start, end) / 2;
+        typename Container::iterator mid = start + std::distance(start, end) / 2;
         if (*mid < value) {
             start = mid + 1;
         } else {
@@ -73,8 +71,8 @@ void PmergeMe::merge(Container& container, int left, int mid, int right) {
     Container leftArr(container.begin() + left, container.begin() + mid + 1);
     Container rightArr(container.begin() + mid + 1, container.begin() + right + 1);
 
-    for (const auto& value : rightArr) {
-        binarySearchInsert(leftArr, value);
+    for (typename Container::const_iterator it = rightArr.begin(); it != rightArr.end(); ++it) {
+        binarySearchInsert(leftArr, *it);
     }
 
     // Copy the sorted elements back to the original container
@@ -101,39 +99,37 @@ void PmergeMe::mergeSort(Container& container, int left, int right) {
 template <typename Container>
 void PmergeMe::printContainer(const Container& container, const std::string& name) {
     std::cout << name<<": ";
-    for (const auto& element : container) {
-        std::cout <<element << " ";
+    for (typename Container::const_iterator it = container.begin(); it != container.end(); ++it) {
+        std::cout << *it << " ";
     }
     std::cout << std::endl;
 }
 
 template <typename Container>
-void PmergeMe::printinfo(Container &container,char ** before,int size,std::chrono::duration<double> time,std::string type)
+void PmergeMe::printinfo(Container &container,char ** before,int size,double time,std::string type)
 {
     std::cout << "Before: ";
     for(int i = 1; i < size; i++)
         std::cout<<before[i]<<" ";
     std::cout<<std::endl;
     printContainer(container,"After: ");
-    std::cout << "Time: to process a range of "<<size<<" elements with "<<type<<" " << time.count()*1000000 << " micro seconds" << std::endl;
+    std::cout << "Time: to process a range of "<<size<<" elements with "<<type<<" " << time<<" microseconds" << std::endl;
     std::cout << std::endl;
 }
 
 void PmergeMe::merge_insertion_sort_impl(int argc, char **argv)
 {
     fillContainer(_Vec, argv, argc);
-    auto start = std::chrono::high_resolution_clock::now();
+    clock_t startVec = clock();
     mergeSort(_Vec, 0, get_VecSize() - 1);
-    auto end = std::chrono::high_resolution_clock::now();
-    _vecTime = end - start;
-    printinfo(_Vec,argv,argc,_vecTime,"vector");
+    clock_t endVec = clock();
+    _vecTime = static_cast<double>(endVec - startVec) / CLOCKS_PER_SEC * 1000000;    printinfo(_Vec,argv,argc,_vecTime,"vector");
 
     fillContainer(_deque, argv, argc);
-    start = std::chrono::high_resolution_clock::now();
+    clock_t startDeque = clock();
     mergeSort(_deque, 0,  get_dequeSize()- 1);
-    end = std::chrono::high_resolution_clock::now();
-    _dequeTime = end - start;
-    printinfo(_deque,argv,argc,_dequeTime,"forward list");
+    clock_t endDeque = clock();
+    _dequeTime = static_cast<double>(endDeque - startDeque) / CLOCKS_PER_SEC * 1000000;    printinfo(_deque,argv,argc,_dequeTime,"deque");
 }
 
 int PmergeMe::get_VecSize() const

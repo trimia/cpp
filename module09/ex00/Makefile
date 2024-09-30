@@ -18,7 +18,7 @@ $(NAME) : $(OBJ)
 	$(CC) $(CXXFLAGS) $(STD) $(OBJ) -o $(NAME) 
 
 %.o : %.cpp $(INC)
-	$(CC) $(CXXFLAGS) -c $< -o $@ 
+	$(CC) $(CXXFLAGS) $(STD) -c $< -o $@
 
 clean :
 	rm -rf $(OBJ) 

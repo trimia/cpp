@@ -4,18 +4,18 @@
 #include <iostream>
 #include <algorithm>
 #include <cstddef>
-#include <cstdint>
+//#include <cstdint>
 #include <functional>
 #include <list>
 #include <iterator>
-#include <type_traits>
+//#include <type_traits>
 #include <vector>
-#include <chrono>
 #include <valarray>
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <deque>
+#include <ctime>
 class PmergeMe
 {
 private:
@@ -23,8 +23,8 @@ private:
     int                     _VecSize;
     int                     _dequeSize;
     std::deque<int>         _deque;
-    std::chrono::duration<double> _vecTime;
-    std::chrono::duration<double> _dequeTime;
+    double _vecTime;
+    double _dequeTime;
 
 public:
     PmergeMe(int argc);
@@ -49,7 +49,7 @@ public:
     void printContainer(const Container &container, const std::string &name);
     void merge_insertion_sort_impl(int argc, char **argv);
     template<typename Container>
-    void printinfo(Container &container, char **before,int size, std::chrono::duration<double> time, std::string type);
+    void printinfo(Container &container, char **before,int size, double time, std::string type);
 };
 
 #endif
