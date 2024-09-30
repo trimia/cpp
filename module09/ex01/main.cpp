@@ -12,7 +12,8 @@ int main(int argc, char **argv)
     try {
         rpn.calculate(argv[1]);
     } catch (std::exception &e) {
-        std::cout << "Error: invalid RPN sequence" << std::endl;
+        std::cout << e.what() << std::endl;
+//        std::cout << "Error: invalid RPN sequence" << std::endl;
     }
 
 

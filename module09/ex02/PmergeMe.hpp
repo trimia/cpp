@@ -22,7 +22,7 @@ private:
     std::vector<int>        _Vec;
     int                     _VecSize;
     int                     _dequeSize;
-    std::deque<int>          _deque;
+    std::deque<int>         _deque;
     std::chrono::duration<double> _vecTime;
     std::chrono::duration<double> _dequeTime;
 

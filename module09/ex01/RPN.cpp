@@ -18,18 +18,15 @@ int toInt(std::string str)
 void RPN::calculate(std::string rpn) {
     std::istringstream isstr(rpn);
     std::string token;
-    int again = 0;
     while (std::getline(isstr, token, ' ')) {
         if(token=="(" || token==")" || token=="[" || token=="]" || token=="{" || token=="}") {
-            std::cout << "Error: invalid RPN sequence" << std::endl;
-            return;
+            throw std::invalid_argument("Error: invalid RPN sequence");
         }
         if (token.size() > 1) {
-            std::cout << "Error: invalid RPN sequence" << std::endl;
-            return;
+            throw std::invalid_argument("Error: invalid RPN sequence");
         }
         if (token == "+" || token == "-" || token == "*" || token == "/") {
-            if (again) {
+            if (_rpn.size() < 2) {
                 throw std::invalid_argument("Error: invalid RPN sequence");
             }
             int a = _rpn.back();
@@ -45,10 +42,8 @@ void RPN::calculate(std::string rpn) {
             } else if (token == "/") {
                 _rpn.push_back(b / a);
             }
-            again=1;
         } else {
             _rpn.push_back(toInt(token));
-            again=0;
         }
     }
     printResult();

@@ -10,6 +10,7 @@ BitcoinExchange::BitcoinExchange()
     {
         std::cout << "Error: Could not open csv file are you sure is in the root of the project?" << std::endl;
     }
+    _data_loaded = true;
 }
 
 BitcoinExchange::~BitcoinExchange()
@@ -28,16 +29,14 @@ bool BitcoinExchange::openFile(std::string filename)
     std::string shrinker;
     std::ifstream file(filename.c_str());
     if (!file.is_open())
-    {
-        std::cout<< "Error: Could not open file" << std::endl;
-        return false;
-    }
+        throw std::invalid_argument("Error: Could not open file");
     std::string line;
     while (std::getline(file, line))
     {
-
         if(line.find("date") != std::string::npos)
             continue;
+        if(_data_loaded== true && line.find(",") != std::string::npos)
+            throw std::invalid_argument("Error: Invalid file format, data already loaded need input in format: data | value");
         if(line.find(",") != std::string::npos)
             shrinker = ",";
         else
@@ -58,7 +57,7 @@ void BitcoinExchange::parseFile(std::string str, std::string shrinker)
     std::string value;
     size_t pos = 0;
     if(str.find(shrinker) == std::string::npos)
-        throw std::invalid_argument("Invalid file format no separator found (data | value)");
+        throw std::invalid_argument("Invalid input file format no separator found (data | value)");
     while ((pos = str.find(shrinker)) != std::string::npos)
     {
         key = str.substr(0, pos);
@@ -119,10 +118,10 @@ void BitcoinExchange::fillWallet(std::string key, double value)
     try
     {
         if (!isValidDateFormat(key)){
-            throw std::invalid_argument("Invalid date in file.txt the format is YYYY-MM-DD");
+            throw std::invalid_argument("Invalid date in the input file the format is YYYY-MM-DD");
         }
         if(value > 1000 || value < 0){
-            throw std::invalid_argument("Invalid value in file.txt the value must be less than 1000 and greater than 0");
+            throw std::invalid_argument("Invalid value in the input file the value must be less than 1000 and greater than 0");
         }
         this->_wallet.insert(std::pair<std::string, double>(key, value));
     }
@@ -165,6 +164,7 @@ void BitcoinExchange::btc()
 {
     for(std::multimap<std::string, double>::iterator it = _wallet.begin(); it != _wallet.end(); ++it)
             std::cout<<std::left<<std::setw(12)<<it->first<<" => "<<std::setw(4)<<it->second<<std::setw(4)<<" = "<<std::right<<std::setw(4)<<it->second * findNearestDate(_exancheRateDb,it->first).second <<std::endl;
+
 }
 
 

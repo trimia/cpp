@@ -20,8 +20,9 @@
 class BitcoinExchange
 {
 private:
-    std::map<std::string, double> _exancheRateDb;
-    std::multimap<std::string, double> _wallet;
+    std::map<std::string, double>       _exancheRateDb;
+    std::multimap<std::string, double>  _wallet;
+    bool                                _data_loaded;
 public:
 
     BitcoinExchange();

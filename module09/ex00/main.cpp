@@ -10,10 +10,15 @@ int main(int argc, char **argv)
     }
     std::string filename = argv[1];
     BitcoinExchange exchange;
-    exchange.openFile(filename);
+    try {
+        exchange.openFile(filename);
+        exchange.btc();
+    } catch (std::exception &e) {
+        std::cout << RED << e.what() << NONE << std::endl;
+        return 1;
+    }
 //    exchange.printMap(exchange.get_exchange_rate_db());
 //    exchange.printWallet(exchange.get_wallet());
-    exchange.btc();
 
     return 0;
 }
